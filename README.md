@@ -1,3 +1,21 @@
+# Usama Yousaf — Portfolio
+
+Next.js (App Router) + TypeScript implementation of the designs in `project/`.
+
+```bash
+npm install
+npm run dev      # http://localhost:3000
+npm run build    # production build
+```
+
+- Pages: `/`, `/about`, `/projects`, `/projects/yaro-voicely`, `/contact` (`src/app/`).
+- Shared parts: `src/components/` (Nav, Ticker, Footer, Services accordion, image Placeholder, Effects).
+- Motion, magnetic buttons, parallax and the custom cursor live in `src/components/Effects.tsx`, driven by `data-reveal`, `data-stagger`, `data-magnetic`, `data-parallax` and `data-cursor` attributes.
+- Colours are CSS variables in `src/app/globals.css`; dark mode redefines them under `html[data-theme='dark']`.
+- Content still to fill in is marked `TODO(usama)`: contact links and resume (`src/lib/site.ts`), bracketed project and case-study copy (`src/lib/projects.ts`, `src/lib/caseStudies.ts`, `src/app/page.tsx`, `src/app/about/page.tsx`), images (pass `src` to `<Placeholder>`), and a real backend for the contact form.
+
+---
+
 # CODING AGENTS: READ THIS FIRST
 
 This is a **handoff bundle** from Claude Design (claude.ai/design).
