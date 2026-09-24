@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Contact — Usama Yousaf</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="./fx.js"></script>
+<script src="./image-slot.js"></script>
+<style>body{margin:0;background:#F7F4EA;color:#17100B;-webkit-font-smoothing:antialiased;}a{color:#17100B;}a:hover{color:#F5A000;}input::placeholder,textarea::placeholder{color:#A89E92;}</style>
+</helmet>
+<div style="font-family:Manrope, sans-serif;background:#F7F4EA;color:#17100B;min-height:100vh;">
+<dc-import name="Nav" active="contact" hint-size="100%,72px" style="position:sticky;top:0;z-index:50;display:block;"></dc-import>
+
+<section data-screen-label="Contact Hero" style="padding:72px 20px 56px;">
+  <div style="max-width:1200px;margin:0 auto;display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px;">
+    <span style="font-size:13px;font-weight:600;color:#6E655C;"><a href="Home.dc.html" style="color:#6E655C;text-decoration:none;">Home</a> <span style="color:#F5A000;">/ Contact</span></span>
+    <h1 style="margin:0;font-family:Unbounded, sans-serif;font-weight:700;font-size:clamp(34px,5.6vw,72px);line-height:1.03;letter-spacing:-0.045em;">Let's Build<br><span style="color:#F5A000;">Something Useful.</span></h1>
+  </div>
+</section>
+
+<dc-import name="Ticker" hint-size="100%,74px"></dc-import>
+
+<section data-screen-label="Form" style="padding:72px 20px;">
+  <div style="max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;gap:24px;align-items:flex-start;">
+    <form onSubmit="{{ submit }}" style="flex:1.6 1 480px;background:#FFFFFF;border:1px solid #EDE6D6;border-radius:32px 32px 32px 8px;padding:clamp(24px,4vw,44px);display:flex;flex-direction:column;gap:20px;">
+      <sc-if value="{{ sent }}">
+        <div style="display:flex;flex-direction:column;gap:14px;align-items:flex-start;padding:40px 0;">
+          <span style="width:56px;height:56px;border-radius:50%;background:#F5A000;display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:800;">✓</span>
+          <h2 style="margin:0;font-family:Unbounded, sans-serif;font-weight:700;font-size:28px;letter-spacing:-0.04em;">Thanks — message received.</h2>
+          <p style="margin:0;color:#6E655C;font-size:16px;line-height:1.6;">I'll reply within one to two working days.</p>
+          <button type="button" onClick="{{ reset }}" style="background:transparent;border:none;padding:0;font-family:Manrope, sans-serif;font-size:14px;font-weight:700;color:#17100B;border-bottom:2px solid #F5A000;cursor:pointer;">Send another</button>
+        </div>
+      </sc-if>
+      <sc-if value="{{ editing }}">
+        <div style="display:flex;flex-direction:column;gap:6px;">
+          <h2 style="margin:0;font-family:Unbounded, sans-serif;font-weight:700;font-size:24px;letter-spacing:-0.04em;">Send a message</h2>
+          <p style="margin:0;color:#6E655C;font-size:15px;">Roles, projects or a quick question — all welcome.</p>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:16px;">
+          <label style="display:flex;flex-direction:column;gap:8px;font-size:13px;font-weight:700;">Name *<input required placeholder="Your name" style="font-family:Manrope, sans-serif;font-size:15px;padding:14px 16px;border-radius:14px;border:1px solid #E7E0D0;background:#F7F4EA;outline:none;color:#17100B;" style-focus="border-color:#F5A000;background:#FFFFFF;"></label>
+          <label style="display:flex;flex-direction:column;gap:8px;font-size:13px;font-weight:700;">Email *<input required type="email" placeholder="you@company.com" style="font-family:Manrope, sans-serif;font-size:15px;padding:14px 16px;border-radius:14px;border:1px solid #E7E0D0;background:#F7F4EA;outline:none;color:#17100B;" style-focus="border-color:#F5A000;background:#FFFFFF;"></label>
+          <label style="display:flex;flex-direction:column;gap:8px;font-size:13px;font-weight:700;">Company<input placeholder="Company or project" style="font-family:Manrope, sans-serif;font-size:15px;padding:14px 16px;border-radius:14px;border:1px solid #E7E0D0;background:#F7F4EA;outline:none;color:#17100B;" style-focus="border-color:#F5A000;background:#FFFFFF;"></label>
+          <label style="display:flex;flex-direction:column;gap:8px;font-size:13px;font-weight:700;">Reason for Contact<select style="font-family:Manrope, sans-serif;font-size:15px;padding:14px 16px;border-radius:14px;border:1px solid #E7E0D0;background:#F7F4EA;outline:none;color:#17100B;"><option>Full-time role</option><option>Contract / freelance project</option><option>Collaboration</option><option>Just saying hi</option></select></label>
+        </div>
+        <label style="display:flex;flex-direction:column;gap:8px;font-size:13px;font-weight:700;">Message *<textarea required rows="6" placeholder="Tell me about the role or product…" style="font-family:Manrope, sans-serif;font-size:15px;padding:14px 16px;border-radius:14px;border:1px solid #E7E0D0;background:#F7F4EA;outline:none;resize:vertical;color:#17100B;" style-focus="border-color:#F5A000;background:#FFFFFF;"></textarea></label>
+        <button data-magnetic="0.25" type="submit" style="align-self:flex-start;display:flex;align-items:center;gap:12px;background:#17100B;color:#F7F4EA;border:none;font-family:Manrope, sans-serif;font-weight:700;font-size:15px;padding:8px 8px 8px 22px;border-radius:999px;cursor:pointer;transition:transform .2s;" style-hover="transform:translateY(-2px);">Send Message <span style="width:36px;height:36px;border-radius:50%;background:#F5A000;color:#17100B;display:flex;align-items:center;justify-content:center;">→</span></button>
+      </sc-if>
+    </form>
+
+    <aside style="flex:1 1 300px;display:flex;flex-direction:column;gap:12px;">
+      <div style="background:#17100B;color:#F7F4EA;border-radius:28px 8px 28px 28px;padding:28px;display:flex;flex-direction:column;">
+        <sc-for list="{{ info }}" as="i" hint-placeholder-count="5">
+          <a href="{{ i.href }}" style="display:flex;justify-content:space-between;align-items:center;gap:12px;padding:16px 0;border-bottom:1px solid #3A2E24;text-decoration:none;color:#F7F4EA;" style-hover="color:#F5A000;">
+            <span style="display:flex;flex-direction:column;gap:4px;">
+              <span style="font-size:12px;font-weight:800;letter-spacing:0.12em;color:#F5A000;">{{ i.k }}</span>
+              <span style="font-size:15px;font-weight:600;">{{ i.v }}</span>
+            </span>
+            <span style="font-size:16px;opacity:0.7;">{{ i.icon }}</span>
+          </a>
+        </sc-for>
+      </div>
+      <div style="background:#F5A000;border-radius:28px 28px 28px 8px;padding:24px 28px;display:flex;align-items:center;gap:12px;">
+        <span style="width:10px;height:10px;border-radius:50%;background:#17100B;box-shadow:0 0 0 4px rgba(23,16,11,0.15);"></span>
+        <span style="font-size:15px;font-weight:700;">Available for full-time roles &amp; select projects</span>
+      </div>
+      <div style="height:180px;border-radius:24px;overflow:hidden;position:relative;background:#EDE6D4;">
+        <image-slot id="contact-map" shape="rect" placeholder="Small map — Pakistan (optional)"></image-slot>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<dc-import name="Footer" hint-size="100%,480px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { sent: false };
+  renderVals() {
+    return {
+      sent: this.state.sent, editing: !this.state.sent,
+      submit: (e) => { e.preventDefault(); this.setState({ sent: true }); },
+      reset: () => this.setState({ sent: false }),
+      info: [
+        { k: 'EMAIL', v: 'hello@usamayousaf.dev', href: 'mailto:hello@usamayousaf.dev', icon: '↗' },
+        { k: 'LINKEDIN', v: 'linkedin.com/in/usamayousaf', href: '#', icon: '↗' },
+        { k: 'GITHUB', v: 'github.com/usamayousaf', href: '#', icon: '↗' },
+        { k: 'LOCATION', v: 'Pakistan · Remote-friendly', href: '#', icon: '•' },
+        { k: 'AVAILABILITY', v: 'Replies within 1–2 working days', href: '#', icon: '•' },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>

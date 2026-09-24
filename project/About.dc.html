@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>About — Usama Yousaf</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="./fx.js"></script>
+<script src="./image-slot.js"></script>
+<style>body{margin:0;background:#F7F4EA;color:#17100B;-webkit-font-smoothing:antialiased;}a{color:#17100B;}a:hover{color:#F5A000;}</style>
+</helmet>
+<div style="font-family:Manrope, sans-serif;background:#F7F4EA;color:#17100B;min-height:100vh;">
+<dc-import name="Nav" active="about" hint-size="100%,72px" style="position:sticky;top:0;z-index:50;display:block;"></dc-import>
+
+<section data-screen-label="About Hero" style="padding:72px 20px 56px;">
+  <div style="max-width:1200px;margin:0 auto;display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px;">
+    <span style="font-size:13px;font-weight:600;color:#6E655C;"><a href="Home.dc.html" style="color:#6E655C;text-decoration:none;">Home</a> <span style="color:#F5A000;">/ About</span></span>
+    <h1 style="margin:0;font-family:Unbounded, sans-serif;font-weight:700;font-size:clamp(34px,5.6vw,72px);line-height:1.03;letter-spacing:-0.045em;">About <span style="color:#F5A000;">Usama.</span></h1>
+  </div>
+</section>
+
+<dc-import name="Ticker" hint-size="100%,74px"></dc-import>
+
+<section data-screen-label="Intro" style="padding:72px 20px;">
+  <div style="max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:16px;">
+    <div style="height:clamp(300px,46vw,540px);border-radius:32px 32px 32px 8px;overflow:hidden;position:relative;background:#EDE6D4;">
+      <image-slot id="about-wide" shape="rect" placeholder="Wide photo — Usama at his desk / working setup"></image-slot>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:16px;">
+      <div style="background:#FFFFFF;border:1px solid #EDE6D6;border-radius:24px 24px 24px 6px;padding:28px;display:flex;flex-direction:column;gap:10px;">
+        <span style="display:flex;align-items:center;gap:10px;font-family:Unbounded, sans-serif;font-weight:600;font-size:18px;"><span style="width:34px;height:34px;border-radius:50%;background:#17100B;color:#F5A000;display:flex;align-items:center;justify-content:center;font-size:14px;">✦</span>Who I am</span>
+        <p style="margin:0;color:#6E655C;font-size:15px;line-height:1.65;">A software developer from Pakistan with around three years of professional experience, building cross-platform products with Flutter as my core.</p>
+      </div>
+      <div style="background:#FFFFFF;border:1px solid #EDE6D6;border-radius:24px 24px 6px 24px;padding:28px;display:flex;flex-direction:column;gap:10px;">
+        <span style="display:flex;align-items:center;gap:10px;font-family:Unbounded, sans-serif;font-weight:600;font-size:18px;"><span style="width:34px;height:34px;border-radius:50%;background:#F5A000;color:#17100B;display:flex;align-items:center;justify-content:center;font-size:14px;">→</span>What I'm looking for</span>
+        <p style="margin:0;color:#6E655C;font-size:15px;line-height:1.65;">A product team where I can own features end to end — mobile, web and the integrations behind them — and keep growing as an engineer.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Story" style="background:#17100B;color:#F7F4EA;padding:112px 20px;border-top:2px solid #F5A000;border-bottom:2px solid #F5A000;">
+  <div style="max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;gap:64px;align-items:center;">
+    <div data-m="frame" style="flex:1 1 340px;max-width:460px;position:relative;aspect-ratio:0.92;">
+      <div style="position:absolute;inset:12% 0 0 0;background:#F5A000;clip-path:polygon(0 8%, 12% 0, 100% 0, 100% 88%, 88% 100%, 0 100%);"></div>
+      <div style="position:absolute;inset:0 6% 0 6%;"><image-slot id="about-story-portrait" shape="rect" placeholder="Portrait cutout" style="width:100%;height:100%;background:transparent;"></image-slot></div>
+    </div>
+    <div style="flex:1 1 420px;display:flex;flex-direction:column;gap:22px;">
+      <span style="display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;"><span style="display:inline-flex;"><span style="width:12px;height:12px;border-radius:50%;background:#F7F4EA;"></span><span style="width:12px;height:12px;border-radius:50%;background:#F5A000;margin-left:-4px;"></span></span>Career Story</span>
+      <h2 style="margin:0;font-family:Unbounded, sans-serif;font-weight:700;font-size:clamp(30px,4vw,52px);line-height:1.04;letter-spacing:-0.04em;">Started With Flutter.<br><span style="color:#F5A000;">Kept Going.</span></h2>
+      <p style="margin:0;color:#CFC5B8;font-size:17px;line-height:1.7;">I'm Usama Yousaf, a software developer focused on turning product ideas into reliable, polished digital experiences. Flutter has been my core specialization for the past three years, but my work increasingly spans mobile, web, backend services, realtime systems and AI-assisted development.</p>
+      <p style="margin:0;color:#CFC5B8;font-size:17px;line-height:1.7;">[Add a few sentences on how you got into development, your freelance years, and joining Black Tech.]</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:20px;padding-top:20px;border-top:1px solid #3A2E24;">
+        <div style="display:flex;flex-direction:column;gap:4px;"><span style="font-family:Unbounded, sans-serif;font-weight:700;font-size:32px;letter-spacing:-0.04em;">3<span style="color:#F5A000;">+</span></span><span style="color:#B8AC9F;font-size:13px;font-weight:600;">Years Experience</span></div>
+        <div style="display:flex;flex-direction:column;gap:4px;"><span style="font-family:Unbounded, sans-serif;font-weight:700;font-size:32px;letter-spacing:-0.04em;">25<span style="color:#F5A000;">+</span></span><span style="color:#B8AC9F;font-size:13px;font-weight:600;">Freelance Projects</span></div>
+        <div style="display:flex;flex-direction:column;gap:4px;"><span style="font-family:Unbounded, sans-serif;font-weight:700;font-size:32px;letter-spacing:-0.04em;">2</span><span style="color:#B8AC9F;font-size:13px;font-weight:600;">Platforms: Mobile + Web</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Philosophy & Strengths" style="padding:112px 20px;">
+  <div style="max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:48px;">
+    <div style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px;">
+      <span style="display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;"><span style="display:inline-flex;"><span style="width:12px;height:12px;border-radius:50%;background:#17100B;"></span><span style="width:12px;height:12px;border-radius:50%;background:#F5A000;margin-left:-4px;"></span></span>How I Think</span>
+      <h2 style="margin:0;font-family:Unbounded, sans-serif;font-weight:700;font-size:clamp(30px,4vw,52px);line-height:1.04;letter-spacing:-0.04em;max-width:820px;text-wrap:balance;">I care about the <span style="color:#F5A000;">complete product</span> — how it looks, feels, performs and ships.</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;">
+      <sc-for list="{{ strengths }}" as="s" hint-placeholder-count="4">
+        <div style="background:#FFFFFF;border:1px solid #EDE6D6;border-radius:24px 24px 24px 6px;padding:28px;display:flex;flex-direction:column;gap:12px;">
+          <span style="font-family:Unbounded, sans-serif;font-size:13px;font-weight:600;color:#F5A000;">{{ s.n }}</span>
+          <h3 style="margin:0;font-family:Unbounded, sans-serif;font-weight:600;font-size:19px;letter-spacing:-0.03em;">{{ s.t }}</h3>
+          <p style="margin:0;color:#6E655C;font-size:15px;line-height:1.6;">{{ s.d }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Timeline" style="padding:0 20px 112px;">
+  <div style="max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;gap:48px;">
+    <div style="flex:1 1 300px;display:flex;flex-direction:column;gap:16px;">
+      <span style="display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;"><span style="display:inline-flex;"><span style="width:12px;height:12px;border-radius:50%;background:#17100B;"></span><span style="width:12px;height:12px;border-radius:50%;background:#F5A000;margin-left:-4px;"></span></span>Experience</span>
+      <h2 style="margin:0;font-family:Unbounded, sans-serif;font-weight:700;font-size:clamp(30px,4vw,52px);line-height:1.04;letter-spacing:-0.04em;">The Journey<br><span style="color:#F5A000;">So Far.</span></h2>
+    </div>
+    <div style="flex:1.6 1 480px;display:flex;flex-direction:column;border-left:2px solid #F5A000;padding-left:28px;gap:28px;">
+      <sc-for list="{{ timeline }}" as="t" hint-placeholder-count="3">
+        <div style="position:relative;display:flex;flex-direction:column;gap:8px;">
+          <span style="position:absolute;left:-38px;top:4px;width:16px;height:16px;border-radius:50%;background:#17100B;border:3px solid #F7F4EA;box-shadow:0 0 0 2px #F5A000;"></span>
+          <span style="font-size:13px;font-weight:700;color:#F5A000;letter-spacing:0.06em;">{{ t.when }}</span>
+          <h3 style="margin:0;font-family:Unbounded, sans-serif;font-weight:600;font-size:20px;letter-spacing:-0.03em;">{{ t.role }}</h3>
+          <span style="font-size:14px;font-weight:600;">{{ t.org }}</span>
+          <p style="margin:0;color:#6E655C;font-size:15px;line-height:1.6;">{{ t.d }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Stack & Achievements" style="background:#17100B;color:#F7F4EA;padding:112px 20px;border-top:2px solid #F5A000;">
+  <div style="max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:56px;">
+    <div style="display:flex;flex-direction:column;gap:20px;">
+      <h2 style="margin:0;font-family:Unbounded, sans-serif;font-weight:700;font-size:clamp(28px,3.6vw,44px);letter-spacing:-0.04em;">Technology <span style="color:#F5A000;">Stack</span></h2>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;">
+        <sc-for list="{{ stack }}" as="s" hint-placeholder-count="14">
+          <span style="border:1px solid #4A3C30;font-size:14px;font-weight:600;padding:9px 16px;border-radius:999px;transition:border-color .2s, color .2s;" style-hover="border-color:#F5A000;color:#F5A000;">{{ s }}</span>
+        </sc-for>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:20px;">
+      <h2 style="margin:0;font-family:Unbounded, sans-serif;font-weight:700;font-size:clamp(28px,3.6vw,44px);letter-spacing:-0.04em;">Selected <span style="color:#F5A000;">Achievements</span></h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;">
+        <sc-for list="{{ achievements }}" as="a" hint-placeholder-count="3">
+          <div style="background:#231A13;border:1px solid #3A2E24;border-radius:24px 24px 24px 6px;padding:28px;display:flex;flex-direction:column;gap:10px;">
+            <span style="width:36px;height:3px;background:#F5A000;border-radius:2px;"></span>
+            <h3 style="margin:6px 0 0;font-family:Unbounded, sans-serif;font-weight:600;font-size:18px;letter-spacing:-0.03em;">{{ a.t }}</h3>
+            <p style="margin:0;color:#CFC5B8;font-size:15px;line-height:1.6;">{{ a.d }}</p>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding:112px 20px;">
+  <div style="max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:28px;background:#F5A000;border-radius:40px 40px 40px 10px;padding:clamp(36px,5vw,72px);">
+    <h2 style="margin:0;font-family:Unbounded, sans-serif;font-weight:700;font-size:clamp(28px,4vw,52px);letter-spacing:-0.045em;line-height:1.04;max-width:640px;">See what I've built, or start a conversation.</h2>
+    <div style="display:flex;flex-wrap:wrap;gap:12px;">
+      <a data-magnetic="0.25" href="Projects.dc.html" style="display:flex;align-items:center;gap:12px;background:#17100B;color:#F7F4EA;text-decoration:none;font-weight:700;font-size:15px;padding:8px 8px 8px 22px;border-radius:999px;" style-hover="color:#F7F4EA;">View Projects <span style="width:36px;height:36px;border-radius:50%;background:#F5A000;color:#17100B;display:flex;align-items:center;justify-content:center;">→</span></a>
+      <a href="Contact.dc.html" style="display:flex;align-items:center;color:#17100B;text-decoration:none;font-weight:700;font-size:15px;padding:0 22px;min-height:52px;border-radius:999px;border:2px solid #17100B;" style-hover="background:#17100B;color:#F5A000;">Contact</a>
+    </div>
+  </div>
+</section>
+
+<dc-import name="Footer" hint-size="100%,480px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      strengths: [
+        { n: '01', t: 'Flutter depth', d: 'Three years of production Flutter: architecture, state management, native integrations and releases.' },
+        { n: '02', t: 'Realtime systems', d: 'Voice rooms, live chat, presence and notifications with Agora, ZegoCloud, WebSockets and FCM.' },
+        { n: '03', t: 'Integrations', d: 'Firebase, Supabase, REST APIs, payments and third-party services like Kisi and Glofox.' },
+        { n: '04', t: 'Range beyond Flutter', d: 'React Native, web admin portals and AI-assisted workflows to get productive in new stacks quickly.' },
+      ],
+      timeline: [
+        { when: '2023 — PRESENT', role: 'Flutter Developer', org: 'Black Tech / Parashoot', d: 'Mobile apps, Flutter web/admin portals, API and Firebase/Supabase integrations, realtime features, debugging and production deployment.' },
+        { when: 'ONGOING', role: 'Freelance Developer', org: '25+ completed projects', d: 'Mobile, web and backend builds for independent clients across industries.' },
+        { when: '[YEAR]', role: '[Earlier role or education]', org: '[Organisation]', d: '[Optional — remove if not needed.]' },
+      ],
+      stack: ['Flutter', 'Dart', 'React Native', 'Firebase', 'Supabase', 'REST APIs', 'WebSockets', 'Provider', 'GetX', 'ChangeNotifier', 'Agora', 'ZegoCloud', 'FCM', 'Figma-to-Code', 'AI Coding Assistants'],
+      achievements: [
+        { t: 'Shipped a realtime social audio platform', d: 'Voice rooms, gifting and in-app currency on Yaro / Voicely.' },
+        { t: 'Integrated physical access & gym systems', d: 'Kisi and Glofox integrations for Restart Fitness.' },
+        { t: '25+ freelance projects delivered', d: 'Across mobile, web and backend work for independent clients.' },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>

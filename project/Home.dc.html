@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Usama Yousaf — Flutter &amp; Product Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="./fx.js"></script>
+<script src="./image-slot.js"></script>
+<style>html{scroll-behavior:smooth;}body{margin:0;background:#F7F4EA;color:#17100B;-webkit-font-smoothing:antialiased;}a{color:#17100B;}a:hover{color:#F5A000;}::selection{background:#F5A000;color:#17100B;}</style>
+</helmet>
+<div style="font-family:Manrope, sans-serif;background:#F7F4EA;color:#17100B;min-height:100vh;">
+
+<dc-import name="Nav" active="home" hint-size="100%,72px" style="position:sticky;top:0;z-index:50;display:block;"></dc-import>
+
+<!-- HERO -->
+<section id="home" data-screen-label="Hero" style="padding:56px 20px 0;overflow:hidden;">
+  <div style="max-width:1200px;margin:0 auto;display:flex;flex-direction:column;align-items:center;text-align:center;gap:22px;">
+    <span style="display:inline-flex;align-items:center;gap:10px;background:#FFFFFF;border:1px solid #E7E0D0;border-radius:999px;padding:7px 16px 7px 8px;font-size:13px;font-weight:600;">
+      <span style="width:22px;height:22px;border-radius:50%;background:#17100B;display:flex;align-items:center;justify-content:center;"><span style="width:8px;height:8px;border-radius:50%;background:#F5A000;"></span></span>
+      Flutter Developer • Product Engineer • AI-Assisted Builder
+    </span>
+    <h1 style="margin:0;font-family:Unbounded, sans-serif;font-weight:700;font-size:clamp(36px,6.4vw,84px);line-height:1.02;letter-spacing:-0.045em;text-wrap:balance;position:relative;">
+      I Build <span style="color:#F5A000;">Digital Products</span><br>That Actually <span style="position:relative;display:inline-block;">Ship.<svg viewBox="0 0 200 20" preserveAspectRatio="none" style="position:absolute;left:0;bottom:-10px;width:100%;height:14px;" fill="none" stroke="#F5A000" stroke-width="5" stroke-linecap="round"><path d="M4 14 C 50 4, 120 4, 196 10"></path></svg><svg width="34" height="34" viewBox="0 0 34 34" style="position:absolute;right:-38px;top:-14px;" fill="none" stroke="#17100B" stroke-width="3" stroke-linecap="round"><path d="M6 20 L2 26"></path><path d="M15 14 L15 4"></path><path d="M22 20 L31 15"></path></svg></span>
+    </h1>
+    <p style="margin:8px 0 0;max-width:620px;font-size:clamp(16px,1.4vw,18px);line-height:1.6;color:#6E655C;text-wrap:pretty;">3+ years building production-ready mobile and web experiences — from polished interfaces to APIs, realtime systems, payments, backend integrations and deployment.</p>
+  </div>
+
+  <div style="max-width:1200px;margin:24px auto 0;display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:center;gap:28px;">
+    <!-- left: proof -->
+    <div data-m="hero-proof" data-parallax="-0.03" style="flex:1 1 220px;max-width:280px;display:flex;flex-direction:column;gap:14px;padding-bottom:48px;order:1;">
+      <div style="display:flex;flex-direction:column;gap:2px;">
+        <span style="font-family:Unbounded, sans-serif;font-weight:700;font-size:40px;letter-spacing:-0.04em;">3<span style="color:#F5A000;">+</span></span>
+        <span style="font-size:14px;color:#6E655C;font-weight:600;">Years shipping Flutter in production</span>
+      </div>
+      <div style="height:1px;background:#E7E0D0;"></div>
+      <div style="display:flex;flex-direction:column;gap:2px;">
+        <span style="font-family:Unbounded, sans-serif;font-weight:700;font-size:40px;letter-spacing:-0.04em;">25<span style="color:#F5A000;">+</span></span>
+        <span style="font-size:14px;color:#6E655C;font-weight:600;">Freelance projects delivered</span>
+      </div>
+      <div style="height:1px;background:#E7E0D0;"></div>
+      <span style="font-size:13px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;">Mobile <span style="color:#F5A000;">•</span> Web <span style="color:#F5A000;">•</span> Backend</span>
+    </div>
+
+    <!-- center: portrait -->
+    <div data-m="hero-portrait" style="flex:0 1 440px;min-width:0;width:100%;position:relative;aspect-ratio:0.88;order:2;">
+      <div data-parallax="-0.05" style="position:absolute;left:6%;right:6%;bottom:0;aspect-ratio:1;border-radius:50%;background:#EDE6D4;"></div>
+      <div data-parallax="0.1" style="position:absolute;left:14%;right:14%;bottom:0;aspect-ratio:1;border-radius:50%;border:2px dashed #F5A000;opacity:0.55;"></div>
+      <div data-parallax="0.03" style="position:absolute;inset:0 4% 0 4%;">
+        <image-slot id="hero-portrait" shape="rect" fit="cover" placeholder="Portrait cutout of Usama (transparent PNG)" style="width:100%;height:100%;background:transparent;"></image-slot>
+      </div>
+      <div data-m="hero-ctas" style="position:absolute;left:50%;bottom:22px;transform:translateX(-50%);display:flex;gap:10px;z-index:2;flex-wrap:nowrap;">
+        <a data-magnetic="0.3" href="#projects" style="display:flex;align-items:center;gap:10px;background:#F5A000;color:#17100B;text-decoration:none;font-weight:700;font-size:15px;padding:8px 8px 8px 22px;border-radius:999px;box-shadow:0 12px 24px -10px rgba(245,160,0,0.7);white-space:nowrap;transition:transform .2s;" style-hover="transform:translateY(-2px);color:#17100B;">View My Work <span style="width:34px;height:34px;border-radius:50%;background:#17100B;color:#F5A000;display:flex;align-items:center;justify-content:center;">→</span></a>
+        <a data-magnetic="0.3" href="#" style="display:flex;align-items:center;gap:8px;background:#FFFFFF;color:#17100B;text-decoration:none;font-weight:700;font-size:15px;padding:0 22px;border-radius:999px;border:2px solid #17100B;white-space:nowrap;transition:background .2s;" style-hover="background:#17100B;color:#F7F4EA;">Download Resume ↓</a>
+      </div>
+    </div>
+
+    <!-- right: stack pills -->
+    <div data-m="hero-pills" data-parallax="-0.06" style="flex:1 1 220px;max-width:300px;display:flex;flex-direction:column;gap:18px;padding-bottom:48px;order:3;">
+      <p style="margin:0;font-size:14px;line-height:1.55;color:#6E655C;"><span style="font-family:Unbounded, sans-serif;color:#F5A000;font-size:28px;line-height:0;vertical-align:-8px;">“</span>Flutter is my foundation. The products span mobile, web, backend and realtime.</p>
+      <div data-m="scroll-x" style="display:flex;flex-wrap:wrap;gap:8px;">
+        <sc-for list="{{ heroPills }}" as="p" hint-placeholder-count="8">
+          <sc-if value="{{ p.dark }}">
+            <span style="background:#17100B;color:#F7F4EA;font-size:13px;font-weight:600;padding:7px 14px;border-radius:999px;">{{ p.label }}</span>
+          </sc-if>
+          <sc-if value="{{ p.light }}">
+            <span style="background:#F5A000;color:#17100B;font-size:13px;font-weight:700;padding:7px 14px;border-radius:999px;">{{ p.label }}</span>
+          </sc-if>
+        </sc-for>
+      </div>
+      <a href="Contact.dc.html" style="font-size:14px;font-weight:700;color:#17100B;text-decoration:none;display:inline-flex;align-items:center;gap:6px;border-bottom:2px solid #F5A000;align-self:flex-start;padding-bottom:2px;" style-hover="color:#F5A000;">Let's Talk →</a>
+    </div>
+  </div>
+</section>
+
+<dc-import name="Ticker" hint-size="100%,74px"></dc-import>
+
+<!-- SERVICES -->
+<section id="services" data-screen-label="What I Do" style="padding:112px 20px;">
+  <div style="max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:48px;">
+    <div style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:24px;">
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <span style="display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;"><span style="display:inline-flex;"><span style="width:12px;height:12px;border-radius:50%;background:#17100B;"></span><span style="width:12px;height:12px;border-radius:50%;background:#F5A000;margin-left:-4px;"></span></span>What I Do</span>
+        <h2 style="margin:0;font-family:Unbounded, sans-serif;font-weight:700;font-size:clamp(32px,4.4vw,56px);line-height:1.04;letter-spacing:-0.04em;">From Idea to<br><span style="color:#F5A000;">Production.</span></h2>
+      </div>
+      <p style="margin:0;max-width:380px;color:#6E655C;font-size:16px;line-height:1.6;">Six things I do on real products — usually several at once, on the same project.</p>
+    </div>
+    <div data-stagger="" style="display:flex;flex-direction:column;gap:12px;">
+      <sc-for list="{{ services }}" as="s" hint-placeholder-count="6">
+        <sc-if value="{{ s.open }}">
+          <div data-m="svc" onClick="{{ s.toggle }}" style="background:#17100B;color:#F7F4EA;border-radius:28px 28px 28px 8px;padding:28px 28px 32px;display:grid;grid-template-columns:minmax(56px,120px) minmax(0,1fr) 44px;gap:20px;cursor:pointer;">
+            <span style="font-family:Unbounded, sans-serif;color:#F5A000;font-weight:600;font-size:16px;padding-top:6px;">{{ s.num }}</span>
+            <div style="display:flex;flex-direction:column;gap:16px;">
+              <h3 style="margin:0;font-family:Unbounded, sans-serif;font-weight:600;font-size:clamp(20px,2.2vw,28px);letter-spacing:-0.03em;">{{ s.title }}</h3>
+              <p style="margin:0;color:#CFC5B8;font-size:16px;line-height:1.6;max-width:640px;">{{ s.desc }}</p>
+              <div style="display:flex;flex-wrap:wrap;gap:8px;">
+                <sc-for list="{{ s.tags }}" as="t">
+                  <span style="border:1px solid #4A3C30;color:#F7F4EA;font-size:13px;font-weight:600;padding:6px 14px;border-radius:999px;">{{ t }}</span>
+                </sc-for>
+              </div>
+            </div>
+            <span style="width:44px;height:44px;border-radius:50%;background:#F5A000;color:#17100B;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;">↗</span>
+          </div>
+        </sc-if>
+        <sc-if value="{{ s.closed }}">
+          <div data-m="svc" onClick="{{ s.toggle }}" style="background:#FFFFFF;border:1px solid #EDE6D6;border-radius:28px 28px 28px 8px;padding:20px 28px;display:grid;grid-template-columns:minmax(56px,120px) minmax(0,1fr) 44px;gap:20px;align-items:center;cursor:pointer;transition:border-color .2s, transform .2s;" style-hover="border-color:#F5A000;transform:translateX(4px);">
+            <span style="font-family:Unbounded, sans-serif;color:#F5A000;font-weight:600;font-size:16px;">{{ s.num }}</span>
+            <h3 style="margin:0;font-family:Unbounded, sans-serif;font-weight:600;font-size:clamp(18px,2vw,24px);letter-spacing:-0.03em;">{{ s.title }}</h3>
+            <span style="width:44px;height:44px;border-radius:50%;border:2px solid #17100B;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;">↗</span>
+          </div>
+        </sc-if>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" data-screen-label="About" style="background:#17100B;color:#F7F4EA;padding:112px 20px;border-top:2px solid #F5A000;border-bottom:2px solid #F5A000;">
+  <div style="max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;gap:64px;align-items:center;">
+    <div data-m="frame" style="flex:1 1 360px;max-width:480px;position:relative;aspect-ratio:0.92;">
+      <div style="position:absolute;inset:12% 0 0 0;background:#F5A000;clip-path:polygon(0 8%, 12% 0, 100% 0, 100% 88%, 88% 100%, 0 100%);"></div>
+      <div style="position:absolute;left:0;top:10%;width:36px;height:36px;border:2px solid #F7F4EA;border-radius:50%;transform:translate(-40%,-40%);"></div>
+      <div style="position:absolute;inset:0 6% 0 6%;">
+        <image-slot id="about-portrait" shape="rect" placeholder="Portrait cutout (waist-up)" style="width:100%;height:100%;background:transparent;"></image-slot>
+      </div>
+      <div style="position:absolute;right:-8px;bottom:14%;display:flex;flex-direction:column;align-items:flex-end;gap:6px;z-index:2;">
+        <span style="background:#17100B;color:#F7F4EA;font-size:13px;font-weight:700;padding:8px 14px;border-radius:999px;transform:rotate(-4deg);border:1px solid #4A3C30;">Flutter · 3 yrs</span>
+        <span style="background:#F7F4EA;color:#17100B;font-size:13px;font-weight:700;padding:8px 14px;border-radius:999px;transform:rotate(3deg);">Realtime systems</span>
+      </div>
+    </div>
+    <div style="flex:1 1 420px;display:flex;flex-direction:column;gap:24px;">
+      <span style="display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;"><span style="display:inline-flex;"><span style="width:12px;height:12px;border-radius:50%;background:#F7F4EA;"></span><span style="width:12px;height:12px;border-radius:50%;background:#F5A000;margin-left:-4px;"></span></span>About Me</span>
+      <h2 style="margin:0;font-family:Unbounded, sans-serif;font-weight:700;font-size:clamp(32px,4.4vw,56px);line-height:1.04;letter-spacing:-0.04em;">More Than Just<br>A <span style="color:#F5A000;">Flutter Developer.</span></h2>
+      <p style="margin:0;color:#CFC5B8;font-size:17px;line-height:1.65;text-wrap:pretty;">I'm Usama Yousaf, a software developer focused on turning product ideas into reliable, polished digital experiences. Flutter has been my core specialization for the past three years, but my work increasingly spans mobile, web, backend services, realtime systems and AI-assisted development.</p>
+      <p style="margin:0;color:#F7F4EA;font-size:17px;line-height:1.65;font-weight:600;">I care about the complete product — how it looks, how it feels, how it performs and how reliably it ships.</p>
+      <a href="About.dc.html" style="align-self:flex-start;display:flex;align-items:center;gap:12px;border:2px solid #F5A000;color:#F7F4EA;text-decoration:none;font-weight:700;font-size:15px;padding:6px 6px 6px 20px;border-radius:999px;" style-hover="background:#F5A000;color:#17100B;">More About Me <span style="width:34px;height:34px;border-radius:50%;background:#F5A000;color:#17100B;display:flex;align-items:center;justify-content:center;">→</span></a>
+    </div>
+  </div>
+  <div style="max-width:1200px;margin:72px auto 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));border-top:1px solid #3A2E24;">
+    <sc-for list="{{ stats }}" as="st" hint-placeholder-count="4">
+      <div style="padding:28px 24px 0 0;display:flex;flex-direction:column;gap:6px;">
+        <span style="font-family:Unbounded, sans-serif;font-weight:700;font-size:clamp(28px,3vw,40px);letter-spacing:-0.04em;">{{ st.v }}</span>
+        <span style="display:flex;align-items:center;gap:8px;color:#B8AC9F;font-size:14px;font-weight:600;"><span style="width:14px;height:2px;background:#F5A000;"></span>{{ st.l }}</span>
+      </div>
+    </sc-for>
+  </div>
+</section>
+
+<!-- TOOLKIT -->
+<section id="skills" data-screen-label="Toolkit" style="padding:112px 20px;">
+  <div style="max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:48px;">
+    <div style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px;">
+      <span style="display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;"><span style="display:inline-flex;"><span style="width:12px;height:12px;border-radius:50%;background:#17100B;"></span><span style="width:12px;height:12px;border-radius:50%;background:#F5A000;margin-left:-4px;"></span></span>My Toolkit</span>
+      <h2 style="margin:0;font-family:Unbounded, sans-serif;font-weight:700;font-size:clamp(32px,4.4vw,56px);line-height:1.04;letter-spacing:-0.04em;"><span style="color:#F5A000;">The Tools</span> Behind<br>What I Build.</h2>
+    </div>
+    <div data-stagger="" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:16px;">
+      <sc-for list="{{ tools }}" as="c" hint-placeholder-count="6">
+        <div style="background:#FFFFFF;border:1px solid #EDE6D6;border-radius:24px 24px 24px 6px;padding:24px;display:flex;flex-direction:column;gap:20px;position:relative;overflow:hidden;transition:transform .25s, box-shadow .25s;" style-hover="transform:translateY(-4px);box-shadow:0 18px 40px -24px rgba(23,16,11,0.35);">
+          <div style="display:flex;align-items:center;justify-content:space-between;">
+            <span style="font-size:12px;font-weight:800;letter-spacing:0.14em;color:#17100B;">{{ c.cat }}</span>
+            <span style="font-family:Unbounded, sans-serif;font-size:12px;font-weight:600;color:#F5A000;">{{ c.num }}</span>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;">
+            <sc-for list="{{ c.items }}" as="t">
+              <span style="display:inline-flex;align-items:center;gap:8px;background:#F7F4EA;border:1px solid #EDE6D6;font-size:14px;font-weight:600;padding:8px 14px 8px 10px;border-radius:12px;transition:border-color .2s, background .2s;" style-hover="border-color:#F5A000;background:#FFF6E0;">
+                <sc-if value="{{ t.icon }}"><img src="{{ t.icon }}" alt="" width="16" height="16" style="display:block;"></sc-if>
+                <sc-if value="{{ t.noIcon }}"><span style="width:6px;height:6px;border-radius:50%;background:#F5A000;margin:0 5px;"></span></sc-if>
+                {{ t.name }}
+              </span>
+            </sc-for>
+          </div>
+          <div style="position:absolute;left:24px;right:24px;bottom:0;height:3px;background:#F5A000;border-radius:3px 3px 0 0;"></div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" data-screen-label="Selected Work" style="background:#17100B;color:#F7F4EA;padding:112px 20px;border-top:2px solid #F5A000;">
+  <div style="max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:32px;">
+    <div style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:16px;">
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <span style="display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;"><span style="display:inline-flex;"><span style="width:12px;height:12px;border-radius:50%;background:#F7F4EA;"></span><span style="width:12px;height:12px;border-radius:50%;background:#F5A000;margin-left:-4px;"></span></span>Selected Work</span>
+        <h2 style="margin:0;font-family:Unbounded, sans-serif;font-weight:700;font-size:clamp(32px,4.4vw,56px);line-height:1.04;letter-spacing:-0.04em;">Products I've Helped<br><span style="color:#F5A000;">Bring to Life.</span></h2>
+      </div>
+      <a data-magnetic="0.25" href="Projects.dc.html" style="display:flex;align-items:center;gap:12px;border:2px solid #F5A000;color:#F7F4EA;text-decoration:none;font-weight:700;font-size:14px;padding:6px 6px 6px 20px;border-radius:999px;" style-hover="background:#F5A000;color:#17100B;">View All Projects <span style="width:32px;height:32px;border-radius:50%;background:#F5A000;color:#17100B;display:flex;align-items:center;justify-content:center;">→</span></a>
+    </div>
+
+    <!-- P01: light card, image left, large -->
+    <article style="background:#F7F4EA;color:#17100B;border-radius:32px 32px 32px 8px;padding:16px;display:flex;flex-wrap:wrap;gap:16px;">
+      <a href="Project Details.dc.html" data-m="proj-img" style="flex:1 1 520px;min-height:420px;border-radius:22px;overflow:hidden;position:relative;display:block;background:#EDE6D4;">
+        <div style="position:absolute;inset:0;transition:transform .5s;" style-hover="transform:scale(1.03);"><image-slot id="proj-yaro" shape="rect" placeholder="Yaro / Voicely — 3–5 app screens (voice room, chat, gifts)"></image-slot></div>
+      </a>
+      <div style="flex:1 1 320px;padding:24px 20px;display:flex;flex-direction:column;gap:18px;justify-content:center;">
+        <span style="font-family:Unbounded, sans-serif;font-size:13px;font-weight:600;color:#F5A000;">01 — Social Audio • Realtime • Mobile</span>
+        <h3 style="margin:0;font-family:Unbounded, sans-serif;font-weight:700;font-size:clamp(28px,3vw,40px);letter-spacing:-0.04em;line-height:1.05;">Yaro / Voicely</h3>
+        <p style="margin:0;color:#6E655C;font-size:16px;line-height:1.6;">A realtime social audio platform featuring voice rooms, live chat, virtual gifts, in-app currency, social interactions and extensive admin tooling.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;">
+          <span style="background:#F5A000;color:#17100B;font-size:12px;font-weight:700;padding:6px 12px;border-radius:999px;">Flutter</span>
+          <span style="background:#FFFFFF;border:1px solid #E7E0D0;font-size:12px;font-weight:600;padding:6px 12px;border-radius:999px;">Agora</span>
+          <span style="background:#FFFFFF;border:1px solid #E7E0D0;font-size:12px;font-weight:600;padding:6px 12px;border-radius:999px;">ZegoCloud</span>
+          <span style="background:#FFFFFF;border:1px solid #E7E0D0;font-size:12px;font-weight:600;padding:6px 12px;border-radius:999px;">WebSockets</span>
+          <span style="background:#FFFFFF;border:1px solid #E7E0D0;font-size:12px;font-weight:600;padding:6px 12px;border-radius:999px;">Firebase</span>
+          <span style="background:#FFFFFF;border:1px solid #E7E0D0;font-size:12px;font-weight:600;padding:6px 12px;border-radius:999px;">In-App Purchases</span>
+        </div>
+        <a data-magnetic="0.25" href="Project Details.dc.html" style="align-self:flex-start;display:flex;align-items:center;gap:10px;background:#17100B;color:#F7F4EA;text-decoration:none;font-weight:700;font-size:14px;padding:6px 6px 6px 18px;border-radius:999px;margin-top:6px;" style-hover="color:#F5A000;">View Case Study <span style="width:32px;height:32px;border-radius:50%;background:#F5A000;color:#17100B;display:flex;align-items:center;justify-content:center;">→</span></a>
+      </div>
+    </article>
+
+    <!-- P02: dark card, image right -->
+    <article style="background:#231A13;border:1px solid #3A2E24;border-radius:32px 32px 8px 32px;padding:16px;display:flex;flex-wrap:wrap-reverse;gap:16px;">
+      <div style="flex:1 1 320px;padding:24px 20px;display:flex;flex-direction:column;gap:18px;justify-content:center;">
+        <span style="font-family:Unbounded, sans-serif;font-size:13px;font-weight:600;color:#F5A000;">02 — Fitness Platform • Mobile • Admin</span>
+        <h3 style="margin:0;font-family:Unbounded, sans-serif;font-weight:700;font-size:clamp(28px,3vw,40px);letter-spacing:-0.04em;line-height:1.05;">Restart Fitness</h3>
+        <p style="margin:0;color:#CFC5B8;font-size:16px;line-height:1.6;">A structured fitness platform built around progressive workout programs, weekly plan generation, exercise management and external service integrations.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;">
+          <span style="background:#F5A000;color:#17100B;font-size:12px;font-weight:700;padding:6px 12px;border-radius:999px;">Flutter</span>
+          <span style="border:1px solid #4A3C30;font-size:12px;font-weight:600;padding:6px 12px;border-radius:999px;">APIs</span>
+          <span style="border:1px solid #4A3C30;font-size:12px;font-weight:600;padding:6px 12px;border-radius:999px;">Kisi</span>
+          <span style="border:1px solid #4A3C30;font-size:12px;font-weight:600;padding:6px 12px;border-radius:999px;">Glofox</span>
+          <span style="border:1px solid #4A3C30;font-size:12px;font-weight:600;padding:6px 12px;border-radius:999px;">Admin Platform</span>
+        </div>
+        <a href="Project Details.dc.html" style="align-self:flex-start;display:flex;align-items:center;gap:10px;color:#F7F4EA;text-decoration:none;font-weight:700;font-size:14px;margin-top:6px;" style-hover="color:#F5A000;"><span style="width:40px;height:40px;border-radius:50%;background:#F5A000;color:#17100B;display:flex;align-items:center;justify-content:center;">↗</span>View Case Study</a>
+      </div>
+      <a href="Project Details.dc.html" data-m="proj-img" style="flex:1 1 520px;min-height:420px;border-radius:22px;overflow:hidden;position:relative;display:block;background:#2E241B;">
+        <div style="position:absolute;inset:0;transition:transform .5s;" style-hover="transform:scale(1.03);"><image-slot id="proj-restart" shape="rect" placeholder="Restart Fitness — program + weekly plan screens, admin panel"></image-slot></div>
+      </a>
+    </article>
+
+    <!-- P03 + P04: side-by-side, varied proportions -->
+    <div style="display:flex;flex-wrap:wrap;gap:32px;">
+      <article style="flex:1.4 1 460px;background:#F5A000;color:#17100B;border-radius:32px 8px 32px 32px;padding:16px;display:flex;flex-direction:column;gap:8px;">
+        <a href="Project Details.dc.html" data-m="proj-img-s" style="height:340px;border-radius:22px;overflow:hidden;position:relative;display:block;background:#E59500;">
+          <div style="position:absolute;inset:0;transition:transform .5s;" style-hover="transform:scale(1.03);"><image-slot id="proj-ludino" shape="rect" placeholder="Ludino — game board + profile screens"></image-slot></div>
+        </a>
+        <div style="padding:20px 12px 12px;display:flex;flex-direction:column;gap:14px;">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:16px;">
+            <div style="display:flex;flex-direction:column;gap:8px;">
+              <span style="font-family:Unbounded, sans-serif;font-size:13px;font-weight:600;">03 — Social Gaming</span>
+              <h3 style="margin:0;font-family:Unbounded, sans-serif;font-weight:700;font-size:clamp(26px,2.6vw,34px);letter-spacing:-0.04em;">Ludino</h3>
+            </div>
+            <a href="Project Details.dc.html" aria-label="Ludino case study" style="width:48px;height:48px;flex-shrink:0;border-radius:50%;background:#17100B;color:#F5A000;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:18px;transition:transform .2s;" style-hover="transform:rotate(45deg);color:#F5A000;">↗</a>
+          </div>
+          <p style="margin:0;font-size:15px;line-height:1.6;color:#2A1D12;">A social gaming experience combining Ludo gameplay, profiles, friendships and realtime social features.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:6px;">
+            <span style="background:#17100B;color:#F7F4EA;font-size:12px;font-weight:600;padding:6px 12px;border-radius:999px;">Flutter</span>
+            <span style="background:#17100B;color:#F7F4EA;font-size:12px;font-weight:600;padding:6px 12px;border-radius:999px;">Realtime</span>
+            <span style="background:#17100B;color:#F7F4EA;font-size:12px;font-weight:600;padding:6px 12px;border-radius:999px;">Gaming</span>
+            <span style="background:#17100B;color:#F7F4EA;font-size:12px;font-weight:600;padding:6px 12px;border-radius:999px;">Social</span>
+          </div>
+        </div>
+      </article>
+      <article style="flex:1 1 340px;background:#F7F4EA;color:#17100B;border-radius:8px 32px 32px 32px;padding:16px;display:flex;flex-direction:column;gap:8px;">
+        <div style="padding:20px 12px 8px;display:flex;flex-direction:column;gap:14px;">
+          <span style="font-family:Unbounded, sans-serif;font-size:13px;font-weight:600;color:#F5A000;">04 — Production App • Black Tech</span>
+          <h3 style="margin:0;font-family:Unbounded, sans-serif;font-weight:700;font-size:clamp(26px,2.6vw,34px);letter-spacing:-0.04em;">Parashoot</h3>
+          <p style="margin:0;font-size:15px;line-height:1.6;color:#6E655C;">[One-line description of your strongest production project — what it does and who uses it.]</p>
+          <div style="display:flex;flex-wrap:wrap;gap:6px;">
+            <span style="background:#F5A000;font-size:12px;font-weight:700;padding:6px 12px;border-radius:999px;">Flutter</span>
+            <span style="background:#FFFFFF;border:1px solid #E7E0D0;font-size:12px;font-weight:600;padding:6px 12px;border-radius:999px;">Supabase</span>
+            <span style="background:#FFFFFF;border:1px solid #E7E0D0;font-size:12px;font-weight:600;padding:6px 12px;border-radius:999px;">Flutter Web</span>
+          </div>
+        </div>
+        <a href="Project Details.dc.html" style="flex:1;min-height:260px;border-radius:22px;overflow:hidden;position:relative;display:block;background:#EDE6D4;">
+          <div style="position:absolute;inset:0;transition:transform .5s;" style-hover="transform:scale(1.03);"><image-slot id="proj-p4" shape="rect" placeholder="Project 04 — hero screen"></image-slot></div>
+        </a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" data-screen-label="Experience" style="padding:112px 20px;">
+  <div style="max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;gap:56px;">
+    <div style="flex:1 1 320px;display:flex;flex-direction:column;gap:16px;">
+      <span style="display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;"><span style="display:inline-flex;"><span style="width:12px;height:12px;border-radius:50%;background:#17100B;"></span><span style="width:12px;height:12px;border-radius:50%;background:#F5A000;margin-left:-4px;"></span></span>Experience</span>
+      <h2 style="margin:0;font-family:Unbounded, sans-serif;font-weight:700;font-size:clamp(32px,4.4vw,56px);line-height:1.04;letter-spacing:-0.04em;">The Journey<br><span style="color:#F5A000;">So Far.</span></h2>
+      <p style="margin:8px 0 0;color:#6E655C;font-size:16px;line-height:1.6;max-width:340px;">A full-time product role alongside a steady run of freelance builds for clients across industries.</p>
+    </div>
+    <div style="flex:1.6 1 480px;display:flex;flex-direction:column;gap:16px;position:relative;">
+      <div data-m="pad-card" style="background:#FFFFFF;border:1px solid #EDE6D6;border-radius:28px 28px 28px 8px;padding:32px;display:flex;flex-direction:column;gap:20px;">
+        <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-start;gap:12px;">
+          <div style="display:flex;gap:16px;align-items:center;">
+            <span style="width:52px;height:52px;border-radius:16px;background:#17100B;color:#F5A000;display:flex;align-items:center;justify-content:center;font-family:Unbounded, sans-serif;font-weight:700;font-size:15px;">BT</span>
+            <div style="display:flex;flex-direction:column;gap:4px;">
+              <h3 style="margin:0;font-family:Unbounded, sans-serif;font-weight:600;font-size:20px;letter-spacing:-0.03em;">Flutter Developer</h3>
+              <span style="font-size:14px;color:#6E655C;font-weight:600;">Black Tech / Parashoot</span>
+            </div>
+          </div>
+          <span style="display:inline-flex;align-items:center;gap:8px;background:#17100B;color:#F7F4EA;font-size:13px;font-weight:700;padding:8px 14px;border-radius:999px;"><span style="width:7px;height:7px;border-radius:50%;background:#F5A000;"></span>2023 — Present</span>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;">
+          <sc-for list="{{ resp }}" as="r" hint-placeholder-count="8">
+            <span style="background:#F7F4EA;border:1px solid #EDE6D6;font-size:13px;font-weight:600;padding:7px 12px;border-radius:10px;">{{ r }}</span>
+          </sc-for>
+        </div>
+      </div>
+      <div data-m="pad-card" style="background:#17100B;color:#F7F4EA;border-radius:28px 8px 28px 28px;padding:32px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:20px;">
+        <div style="display:flex;gap:16px;align-items:center;">
+          <span style="width:52px;height:52px;border-radius:16px;background:#F5A000;color:#17100B;display:flex;align-items:center;justify-content:center;font-family:Unbounded, sans-serif;font-weight:700;font-size:15px;">FL</span>
+          <div style="display:flex;flex-direction:column;gap:4px;">
+            <h3 style="margin:0;font-family:Unbounded, sans-serif;font-weight:600;font-size:20px;letter-spacing:-0.03em;">Freelance Development</h3>
+            <span style="font-size:14px;color:#B8AC9F;font-weight:600;">Mobile, web &amp; backend for independent clients</span>
+          </div>
+        </div>
+        <span style="font-family:Unbounded, sans-serif;font-weight:700;font-size:32px;letter-spacing:-0.04em;">25<span style="color:#F5A000;">+</span> <span style="font-family:Manrope, sans-serif;font-size:14px;font-weight:600;color:#B8AC9F;letter-spacing:0;">completed projects</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process" data-screen-label="Process" style="padding:0 20px 112px;">
+  <div style="max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:48px;">
+    <div style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px;">
+      <span style="display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;"><span style="display:inline-flex;"><span style="width:12px;height:12px;border-radius:50%;background:#17100B;"></span><span style="width:12px;height:12px;border-radius:50%;background:#F5A000;margin-left:-4px;"></span></span>My Process</span>
+      <h2 style="margin:0;font-family:Unbounded, sans-serif;font-weight:700;font-size:clamp(32px,4.4vw,56px);line-height:1.04;letter-spacing:-0.04em;">How I Turn <span style="color:#F5A000;">Ideas</span><br>Into Products.</h2>
+    </div>
+    <div data-stagger="" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;">
+      <sc-for list="{{ process }}" as="p" hint-placeholder-count="4">
+        <div style="background:#FFFFFF;border:1px solid #EDE6D6;border-radius:24px 24px 24px 6px;padding:28px 24px;display:flex;flex-direction:column;gap:14px;position:relative;">
+          <div style="display:flex;align-items:center;justify-content:space-between;">
+            <span style="font-family:Unbounded, sans-serif;font-weight:700;font-size:14px;color:#17100B;background:#F5A000;padding:6px 12px;border-radius:999px;">{{ p.n }}</span>
+            <span style="color:#F5A000;font-size:20px;font-weight:700;">{{ p.arrow }}</span>
+          </div>
+          <h3 style="margin:8px 0 0;font-family:Unbounded, sans-serif;font-weight:600;font-size:22px;letter-spacing:-0.03em;">{{ p.t }}</h3>
+          <p style="margin:0;color:#6E655C;font-size:15px;line-height:1.6;">{{ p.d }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section data-screen-label="Why Work With Me" style="background:#17100B;color:#F7F4EA;padding:112px 20px;border-top:2px solid #F5A000;">
+  <div style="max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;gap:56px;">
+    <div style="flex:1 1 320px;display:flex;flex-direction:column;gap:16px;">
+      <span style="display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;"><span style="display:inline-flex;"><span style="width:12px;height:12px;border-radius:50%;background:#F7F4EA;"></span><span style="width:12px;height:12px;border-radius:50%;background:#F5A000;margin-left:-4px;"></span></span>Why Work With Me</span>
+      <h2 style="margin:0;font-family:Unbounded, sans-serif;font-weight:700;font-size:clamp(32px,4.4vw,52px);line-height:1.04;letter-spacing:-0.04em;">Engineering With<br><span style="color:#F5A000;">A Product Mindset.</span></h2>
+    </div>
+    <div style="flex:1.6 1 480px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;" data-stagger="">
+      <sc-for list="{{ why }}" as="w" hint-placeholder-count="4">
+        <div style="background:#231A13;border:1px solid #3A2E24;border-radius:24px 24px 24px 6px;padding:28px;display:flex;flex-direction:column;gap:12px;transition:border-color .2s;" style-hover="border-color:#F5A000;">
+          <span style="width:36px;height:3px;background:#F5A000;border-radius:2px;"></span>
+          <h3 style="margin:6px 0 0;font-family:Unbounded, sans-serif;font-weight:600;font-size:19px;letter-spacing:-0.03em;">{{ w.t }}</h3>
+          <p style="margin:0;color:#CFC5B8;font-size:15px;line-height:1.6;">{{ w.d }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT CTA -->
+<section data-screen-label="Contact CTA" style="padding:112px 20px;">
+  <div style="max-width:1200px;margin:0 auto;background:#F5A000;border-radius:40px 40px 40px 10px;padding:clamp(40px,6vw,88px) clamp(24px,5vw,72px);display:flex;flex-direction:column;align-items:flex-start;gap:28px;position:relative;overflow:hidden;">
+    <div style="position:absolute;right:-80px;top:-80px;width:320px;height:320px;border-radius:50%;border:2px solid #17100B;opacity:0.15;"></div>
+    <div style="position:absolute;right:40px;top:40px;width:120px;height:120px;border-radius:50%;background:#17100B;opacity:0.08;"></div>
+    <h2 style="margin:0;font-family:Unbounded, sans-serif;font-weight:700;font-size:clamp(30px,4.8vw,64px);line-height:1.03;letter-spacing:-0.045em;max-width:900px;text-wrap:balance;position:relative;">Have a Product to Build or a Team I Could Join?</h2>
+    <p style="margin:0;max-width:560px;font-size:17px;line-height:1.6;color:#2A1D12;position:relative;">I'm open to software engineering opportunities, product teams and ambitious projects where I can build useful things and keep growing.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:12px;position:relative;">
+      <a data-magnetic="0.25" href="Contact.dc.html" style="display:flex;align-items:center;gap:12px;background:#17100B;color:#F7F4EA;text-decoration:none;font-weight:700;font-size:16px;padding:8px 8px 8px 24px;border-radius:999px;transition:transform .2s;" style-hover="transform:translateY(-2px);color:#F7F4EA;">Let's Talk <span style="width:38px;height:38px;border-radius:50%;background:#F5A000;color:#17100B;display:flex;align-items:center;justify-content:center;">→</span></a>
+      <a href="#" style="display:flex;align-items:center;gap:8px;color:#17100B;text-decoration:none;font-weight:700;font-size:16px;padding:0 24px;min-height:54px;border-radius:999px;border:2px solid #17100B;" style-hover="background:#17100B;color:#F5A000;">Download Resume ↓</a>
+    </div>
+  </div>
+</section>
+
+<dc-import name="Footer" hint-size="100%,480px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { open: 0 };
+  renderVals() {
+    const si = (s) => `https://cdn.simpleicons.org/${s}/17100B`;
+    const svc = [
+      ['Mobile App Development', 'Cross-platform, production-ready mobile applications with polished UI, scalable architecture and native integrations.', ['Flutter', 'React Native', 'Firebase', 'Supabase']],
+      ['Web Application Development', 'Responsive modern web applications, dashboards, portals and product experiences.', ['Flutter Web', 'Admin Dashboards', 'Responsive UI']],
+      ['Backend & API Integration', 'Firebase, Supabase, REST APIs, authentication, cloud storage, realtime data and third-party integrations.', ['Firebase', 'Supabase', 'REST APIs', 'Auth']],
+      ['Realtime Experiences', 'Chat, social audio, live interactions, notifications and realtime application architecture.', ['Agora', 'ZegoCloud', 'WebSockets', 'FCM']],
+      ['Product UI Implementation', 'Turning Figma/design concepts into responsive, pixel-accurate production interfaces.', ['Figma-to-Code', 'Design Systems', 'Animations']],
+      ['AI-Assisted Product Development', 'Using modern AI development workflows to rapidly prototype, build, debug and ship across unfamiliar technologies while maintaining engineering judgment and product quality.', ['Rapid Prototyping', 'Debugging', 'Design-to-Code']],
+    ];
+    const services = svc.map(([title, desc, tags], i) => ({
+      num: String(i + 1).padStart(2, '0') + '.', title, desc, tags,
+      open: this.state.open === i, closed: this.state.open !== i,
+      toggle: () => this.setState({ open: this.state.open === i ? -1 : i }),
+    }));
+    const t = (name, icon) => ({ name, icon: icon ? si(icon) : null, noIcon: !icon });
+    const tools = [
+      ['MOBILE', [t('Flutter', 'flutter'), t('Dart', 'dart'), t('React Native', 'react')]],
+      ['BACKEND & CLOUD', [t('Firebase', 'firebase'), t('Supabase', 'supabase'), t('REST APIs'), t('WebSockets', 'socketdotio')]],
+      ['STATE & ARCHITECTURE', [t('Provider'), t('GetX'), t('ChangeNotifier')]],
+      ['REALTIME & MEDIA', [t('Agora'), t('ZegoCloud'), t('FCM', 'firebase')]],
+      ['WEB & PRODUCT', [t('Responsive Web', 'googlechrome'), t('Admin Dashboards'), t('Figma-to-Code', 'figma')]],
+      ['AI WORKFLOW', [t('AI Coding Assistants'), t('Rapid Prototyping'), t('Debugging'), t('Code Generation'), t('Design-to-Code')]],
+    ].map(([cat, items], i) => ({ cat, items, num: String(i + 1).padStart(2, '0') }));
+    const pills = ['Flutter', 'React Native', 'Web Apps', 'Firebase', 'Supabase', 'REST APIs', 'Realtime', 'AI Workflows'];
+    return {
+      services, tools,
+      heroPills: pills.map((label, i) => ({ label, dark: i % 3 !== 1, light: i % 3 === 1 })),
+      stats: [{ v: '3+', l: 'Years Experience' }, { v: '25+', l: 'Freelance Projects' }, { v: 'Multiple', l: 'Production Products' }, { v: 'Mobile + Web', l: 'Platforms' }],
+      resp: ['Mobile application development', 'Flutter web / admin portals', 'API integrations', 'Firebase / Supabase', 'Realtime functionality', 'Product implementation', 'Debugging & optimization', 'Production deployment'],
+      process: [
+        { n: '01', t: 'Understand', d: 'Clarify the product, users, requirements and constraints.', arrow: '→' },
+        { n: '02', t: 'Plan', d: 'Choose architecture, technologies and implementation approach.', arrow: '→' },
+        { n: '03', t: 'Build', d: 'Develop the product iteratively with modern engineering and AI-assisted workflows.', arrow: '→' },
+        { n: '04', t: 'Refine & Ship', d: 'Test, optimize, polish and prepare the product for production.', arrow: '✦' },
+      ],
+      why: [
+        { t: 'Product Thinking', d: 'I care about solving the actual user problem, not just completing tickets.' },
+        { t: 'Fast Adaptation', d: 'I can move between technologies and quickly become productive in unfamiliar stacks.' },
+        { t: 'End-to-End Ownership', d: 'From UI implementation and backend integration to debugging and deployment.' },
+        { t: 'AI-Accelerated Workflow', d: 'I use AI as an engineering accelerator for research, prototyping and implementation — while keeping human judgment in architecture, quality and product decisions.' },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>
