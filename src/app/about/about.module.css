@@ -1,0 +1,340 @@
+.hero {
+  padding: 72px 20px 56px;
+}
+.heroInner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+}
+
+/* Intro */
+.intro {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.wide {
+  height: clamp(300px, 46vw, 540px);
+  border-radius: 32px 32px 32px 8px;
+  overflow: hidden;
+  position: relative;
+  background: var(--sunk);
+}
+.introGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+  gap: 16px;
+}
+.introCard {
+  background: var(--card);
+  border: 1px solid var(--line);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.r1 {
+  border-radius: 24px 24px 24px 6px;
+}
+.r2 {
+  border-radius: 24px 24px 6px 24px;
+}
+.introHead {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 18px;
+}
+.icoDark,
+.icoOrange {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+.icoDark {
+  background: var(--dark);
+  color: var(--orange);
+}
+.icoOrange {
+  background: var(--orange);
+  color: var(--dark);
+}
+.introP {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+/* Story */
+.storyRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 64px;
+  align-items: center;
+}
+.frame {
+  flex: 1 1 340px;
+  max-width: 460px;
+  position: relative;
+  aspect-ratio: 0.92;
+}
+.frameShape {
+  position: absolute;
+  inset: 12% 0 0 0;
+  background: var(--orange);
+  clip-path: polygon(0 8%, 12% 0, 100% 0, 100% 88%, 88% 100%, 0 100%);
+}
+.frameImg {
+  position: absolute;
+  inset: 0 6%;
+}
+@media (max-width: 720px) {
+  .frame {
+    max-width: 360px;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+.storyText {
+  flex: 1 1 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.storyP {
+  color: var(--on-dark);
+  font-size: 17px;
+  line-height: 1.7;
+}
+.storyStats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 20px;
+  padding-top: 20px;
+  border-top: 1px solid var(--dark-line);
+}
+.storyStat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.storyStatV {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 32px;
+  letter-spacing: -0.04em;
+}
+.storyStatL {
+  color: var(--on-dark-2);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Philosophy & strengths */
+.stack48 {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+.centerHead {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+}
+.thinkTitle {
+  max-width: 820px;
+  text-wrap: balance;
+}
+.strengths {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 24px 24px 24px 6px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.cardNum {
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--orange);
+}
+.cardTitle {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 19px;
+  letter-spacing: -0.03em;
+}
+.cardP {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* Timeline */
+.timelineRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px;
+}
+.timelineHead {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.timeline {
+  flex: 1.6 1 480px;
+  display: flex;
+  flex-direction: column;
+  border-left: 2px solid var(--orange);
+  padding-left: 28px;
+  gap: 28px;
+}
+.tlItem {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.tlDot {
+  position: absolute;
+  left: -38px;
+  top: 4px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--dark);
+  border: 3px solid var(--bg);
+  box-shadow: 0 0 0 2px var(--orange);
+}
+.tlWhen {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--orange);
+  letter-spacing: 0.06em;
+}
+.tlRole {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: -0.03em;
+}
+.tlOrg {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Stack & achievements */
+.stack56 {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+}
+.stack20 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.h2dark {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(28px, 3.6vw, 44px);
+  letter-spacing: -0.04em;
+}
+.stackChips {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.stackChip {
+  border: 1px solid var(--dark-line-2);
+  font-size: 14px;
+  font-weight: 600;
+  padding: 9px 16px;
+  border-radius: 999px;
+  transition: border-color 0.2s, color 0.2s;
+}
+.stackChip:hover {
+  border-color: var(--orange);
+  color: var(--orange);
+}
+.achGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+.achCard {
+  background: var(--dark-2);
+  border: 1px solid var(--dark-line);
+  border-radius: 24px 24px 24px 6px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.achBar {
+  width: 36px;
+  height: 3px;
+  background: var(--orange);
+  border-radius: 2px;
+}
+.achTitle {
+  margin-top: 6px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: -0.03em;
+}
+.achP {
+  color: var(--on-dark);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* CTA */
+.cta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 28px;
+  background: var(--orange);
+  color: var(--dark);
+  border-radius: 40px 40px 40px 10px;
+  padding: clamp(36px, 5vw, 72px);
+}
+.ctaTitle {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(28px, 4vw, 52px);
+  letter-spacing: -0.045em;
+  line-height: 1.04;
+  max-width: 640px;
+}
+.ctaBtns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.ctaContact {
+  font-size: 15px;
+  padding: 0 22px;
+  min-height: 52px;
+}

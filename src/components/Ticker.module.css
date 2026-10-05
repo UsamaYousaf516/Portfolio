@@ -1,0 +1,47 @@
+.strip {
+  width: 100%;
+  background: var(--dark);
+  overflow: hidden;
+  padding: 22px 0;
+  border-top: 2px solid var(--orange);
+  border-bottom: 2px solid var(--orange);
+}
+.track {
+  display: inline-flex;
+  white-space: nowrap;
+  animation: ticker 40s linear infinite;
+}
+.item {
+  display: inline-flex;
+  align-items: center;
+  gap: 36px;
+  padding-right: 36px;
+}
+.text {
+  color: var(--cream);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 22px;
+  letter-spacing: -0.02em;
+}
+.star {
+  color: var(--orange);
+  font-size: 22px;
+}
+@keyframes ticker {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+@media (max-width: 720px) {
+  .item {
+    gap: 24px;
+    padding-right: 24px;
+  }
+  .text {
+    font-size: 16px;
+  }
+}

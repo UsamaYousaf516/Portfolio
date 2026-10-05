@@ -1,0 +1,58 @@
+.screens {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(6px, 1.5vw, 22px);
+  padding: clamp(12px, 3vw, 36px);
+  overflow: hidden;
+  background: radial-gradient(ellipse at 50% 30%, #243a86, #07122d 65%, #040a18);
+}
+
+.screen {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: calc((100% - 3 * clamp(6px, 1.5vw, 22px)) / 4);
+  max-height: 100%;
+  object-fit: contain;
+  border: 1px solid #354873;
+  border-radius: clamp(5px, 1vw, 14px);
+  box-shadow: 0 12px 30px #0008;
+}
+
+.screen:nth-child(odd) {
+  transform: translateY(-8px);
+}
+
+.screen:nth-child(even) {
+  transform: translateY(8px);
+}
+
+.screens:focus-visible {
+  outline: 2px solid var(--orange);
+  outline-offset: -3px;
+}
+
+@media (max-width: 720px) {
+  .screens {
+    justify-content: flex-start;
+    gap: 12px;
+    padding: 16px;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    scroll-snap-type: x proximity;
+    scrollbar-width: thin;
+    scrollbar-color: #5971b9 #07122d;
+  }
+
+  .screen {
+    flex-shrink: 0;
+    height: 100%;
+    max-width: none;
+    max-height: 100%;
+    transform: none !important;
+    scroll-snap-align: center;
+  }
+}
