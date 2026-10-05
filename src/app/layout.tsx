@@ -20,9 +20,13 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: { default: 'Usama Yousaf — Flutter & Product Engineer', template: '%s — Usama Yousaf' },
+  title: { default: 'Usama Yousaf — AI Developer & Software Engineer', template: '%s — Usama Yousaf' },
   description:
-    'Flutter-first product engineer with 3+ years building production-ready mobile and web experiences — from polished interfaces to APIs, realtime systems and deployment.',
+    'AI developer and software engineer using Claude, ChatGPT and MCP servers to build mobile and web applications. 3+ years of experience across Flutter, API integrations, realtime systems and production releases.',
+  // The share image comes from app/opengraph-image.png. No og:title is set, so each page's
+  // own <title> is used when its link is shared.
+  openGraph: { type: 'website', siteName: 'Usama Yousaf' },
+  twitter: { card: 'summary_large_image' },
 };
 
 export const viewport: Viewport = {

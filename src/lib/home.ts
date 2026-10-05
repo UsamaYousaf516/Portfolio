@@ -1,39 +1,39 @@
 const si = (slug: string) => `https://cdn.simpleicons.org/${slug}/17100B`;
 
-export const heroPills = ['Flutter', 'React Native', 'Web Apps', 'Firebase', 'Supabase', 'REST APIs', 'Realtime', 'AI Workflows'];
+export const heroPills = ['Claude', 'ChatGPT', 'MCP Servers', 'Next.js', 'TypeScript', 'Flutter', 'Firebase', 'Supabase'];
 
 export type Service = { title: string; desc: string; tags: string[] };
 
 export const services: Service[] = [
   {
-    title: 'Mobile App Development',
-    desc: 'Cross-platform, production-ready mobile applications with polished UI, scalable architecture and native integrations.',
-    tags: ['Flutter', 'React Native', 'Firebase', 'Supabase'],
+    title: 'AI-Assisted Software Development',
+    desc: 'I use Claude, ChatGPT and MCP servers to support research, prototyping, implementation and debugging. I review the output and test how the software behaves before shipping it.',
+    tags: ['Claude', 'ChatGPT', 'MCP Servers', 'Prompt Engineering'],
   },
   {
     title: 'Web Application Development',
-    desc: 'Responsive modern web applications, dashboards, portals and product experiences.',
-    tags: ['Flutter Web', 'Admin Dashboards', 'Responsive UI'],
+    desc: 'I build responsive websites, web applications and admin dashboards, connecting interfaces to the data and services they need.',
+    tags: ['Next.js', 'React', 'TypeScript', 'Flutter Web'],
   },
   {
     title: 'Backend & API Integration',
-    desc: 'Firebase, Supabase, REST APIs, authentication, cloud storage, realtime data and third-party integrations.',
-    tags: ['Firebase', 'Supabase', 'REST APIs', 'Auth'],
+    desc: 'I connect applications to authentication, databases, storage, payments and external services, with Firebase, Supabase and REST APIs.',
+    tags: ['Firebase', 'Supabase', 'REST APIs', 'Authentication'],
   },
   {
-    title: 'Realtime Experiences',
-    desc: 'Chat, social audio, live interactions, notifications and realtime application architecture.',
+    title: 'Realtime Application Development',
+    desc: 'I implement voice rooms, messaging, live events and push notifications, including the connection and state handling that keeps these experiences usable.',
     tags: ['Agora', 'ZegoCloud', 'WebSockets', 'FCM'],
   },
   {
-    title: 'Product UI Implementation',
-    desc: 'Turning Figma/design concepts into responsive, pixel-accurate production interfaces.',
-    tags: ['Figma-to-Code', 'Design Systems', 'Animations'],
+    title: 'Cross-Platform Mobile Development',
+    desc: 'Three years of Flutter experience building mobile applications, integrating native SDKs and maintaining production releases, alongside work with React Native.',
+    tags: ['Flutter', 'Dart', 'React Native', 'SDK Integration'],
   },
   {
-    title: 'AI-Assisted Product Development',
-    desc: 'Using modern AI development workflows to rapidly prototype, build, debug and ship across unfamiliar technologies while maintaining engineering judgment and product quality.',
-    tags: ['Rapid Prototyping', 'Debugging', 'Design-to-Code'],
+    title: 'Software Delivery & Maintenance',
+    desc: 'I work through requirements, implementation, debugging and release, then improve the application as new needs and issues emerge.',
+    tags: ['Code Review', 'Debugging', 'Performance Optimization', 'Deployment'],
   },
 ];
 
@@ -41,45 +41,45 @@ type Tool = { name: string; icon?: string };
 const t = (name: string, slug?: string): Tool => ({ name, icon: slug ? si(slug) : undefined });
 
 export const toolkit: { cat: string; items: Tool[] }[] = [
-  { cat: 'MOBILE', items: [t('Flutter', 'flutter'), t('Dart', 'dart'), t('React Native', 'react')] },
-  { cat: 'BACKEND & CLOUD', items: [t('Firebase', 'firebase'), t('Supabase', 'supabase'), t('REST APIs'), t('WebSockets', 'socketdotio')] },
-  { cat: 'STATE & ARCHITECTURE', items: [t('Provider'), t('GetX'), t('ChangeNotifier')] },
-  { cat: 'REALTIME & MEDIA', items: [t('Agora'), t('ZegoCloud'), t('FCM', 'firebase')] },
-  { cat: 'WEB & PRODUCT', items: [t('Responsive Web', 'googlechrome'), t('Admin Dashboards'), t('Figma-to-Code', 'figma')] },
-  { cat: 'AI WORKFLOW', items: [t('AI Coding Assistants'), t('Rapid Prototyping'), t('Debugging'), t('Code Generation'), t('Design-to-Code')] },
+  { cat: 'AI DEVELOPMENT', items: [t('Claude'), t('ChatGPT'), t('MCP Servers'), t('Prompt Engineering'), t('AI-Assisted Development')] },
+  { cat: 'WEB DEVELOPMENT', items: [t('Next.js', 'nextdotjs'), t('React', 'react'), t('TypeScript', 'typescript'), t('Responsive Web Design')] },
+  { cat: 'MOBILE DEVELOPMENT', items: [t('Flutter', 'flutter'), t('Dart', 'dart'), t('React Native', 'react'), t('Cross-Platform Development')] },
+  { cat: 'BACKEND & INTEGRATIONS', items: [t('Firebase', 'firebase'), t('Supabase', 'supabase'), t('REST APIs'), t('Authentication')] },
+  { cat: 'REALTIME APPLICATIONS', items: [t('WebSockets', 'socketdotio'), t('Agora'), t('ZegoCloud'), t('Push Notifications')] },
+  { cat: 'SOFTWARE ENGINEERING', items: [t('Software Architecture'), t('Code Review'), t('Debugging'), t('Performance Optimization'), t('Deployment')] },
 ];
 
 export const aboutStats = [
-  { v: '3+', l: 'Years Experience' },
-  { v: '25+', l: 'Freelance Projects' },
-  { v: 'Multiple', l: 'Production Products' },
-  { v: 'Mobile + Web', l: 'Platforms' },
+  { v: '3+', l: 'Years in Software Development' },
+  { v: '25+', l: 'Freelance Projects Delivered' },
+  { v: 'AI', l: 'Claude · ChatGPT · MCP Servers' },
+  { v: 'Mobile + Web', l: 'Application Development' },
 ];
 
 export const responsibilities = [
-  'Mobile application development',
-  'Flutter web / admin portals',
-  'API integrations',
-  'Firebase / Supabase',
-  'Realtime functionality',
-  'Product implementation',
-  'Debugging & optimization',
-  'Production deployment',
+  'Cross-platform mobile development',
+  'Web applications & admin dashboards',
+  'REST API & SDK integration',
+  'Firebase & Supabase integration',
+  'Realtime communication',
+  'Feature development & maintenance',
+  'Debugging & performance optimization',
+  'Production releases',
 ];
 
 export const processSteps = [
-  { n: '01', t: 'Understand', d: 'Clarify the product, users, requirements and constraints.', arrow: '→' },
-  { n: '02', t: 'Plan', d: 'Choose architecture, technologies and implementation approach.', arrow: '→' },
-  { n: '03', t: 'Build', d: 'Develop the product iteratively with modern engineering and AI-assisted workflows.', arrow: '→' },
-  { n: '04', t: 'Refine & Ship', d: 'Test, optimize, polish and prepare the product for production.', arrow: '✦' },
+  { n: '01', t: 'Define', d: 'Understand the users, requirements and constraints. Make the expected behavior clear before writing code.', arrow: '→' },
+  { n: '02', t: 'Design', d: 'Choose the stack, application structure and integrations. Break the work into features that can be reviewed and tested.', arrow: '→' },
+  { n: '03', t: 'Build with AI', d: 'Use Claude and ChatGPT to prototype and implement. Review generated code and connect it to the rest of the application.', arrow: '→' },
+  { n: '04', t: 'Verify & Release', d: 'Test user flows, fix defects, check performance and prepare the release. Keep improving after deployment.', arrow: '✦' },
 ];
 
 export const whyMe = [
-  { t: 'Product Thinking', d: 'I care about solving the actual user problem, not just completing tickets.' },
-  { t: 'Fast Adaptation', d: 'I can move between technologies and quickly become productive in unfamiliar stacks.' },
-  { t: 'End-to-End Ownership', d: 'From UI implementation and backend integration to debugging and deployment.' },
+  { t: 'Production Experience', d: 'My work includes social audio, fitness and gaming applications, with real integrations, release requirements and ongoing maintenance.' },
+  { t: 'Adaptability', d: 'I use AI tools and documentation to work across stacks, then validate the result in the application.' },
+  { t: 'Feature Ownership', d: 'I follow features from requirements and interface implementation through integrations, debugging and release.' },
   {
-    t: 'AI-Accelerated Workflow',
-    d: 'I use AI as an engineering accelerator for research, prototyping and implementation — while keeping human judgment in architecture, quality and product decisions.',
+    t: 'Engineering Judgment',
+    d: 'Claude and ChatGPT support my workflow. I remain responsible for understanding the code, reviewing decisions and checking that the software works.',
   },
 ];

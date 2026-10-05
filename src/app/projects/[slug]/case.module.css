@@ -24,8 +24,60 @@
   position: relative;
   background: var(--sunk);
 }
+.heroImgShowcase {
+  height: clamp(260px, 37vw, 490px);
+  background: #000;
+}
 
 /* Overview */
+.results {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px 56px;
+  margin: 12px 0 0;
+}
+.results > div {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 6px;
+}
+.results dt {
+  font-size: 14px;
+  color: var(--muted);
+}
+.results dd {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(32px, 4vw, 48px);
+  color: var(--orange);
+}
+.desktopHero {
+  height: auto;
+  aspect-ratio: 1600 / 1025;
+  background: #030717;
+}
+.desktopGallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px 20px;
+}
+.desktopShot {
+  display: block;
+  position: relative;
+  aspect-ratio: 1600 / 1025;
+  overflow: hidden;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  background: #030717;
+}
+@media (max-width: 720px) {
+  .desktopGallery {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
 .overview {
   display: flex;
   flex-wrap: wrap;
@@ -278,6 +330,32 @@
 }
 
 /* Gallery */
+.showcaseGallery,
+.showcaseFigure {
+  width: 100%;
+}
+.showcaseFigure {
+  margin: 0;
+}
+.showcaseShot {
+  position: relative;
+  aspect-ratio: 3 / 1;
+  overflow: hidden;
+  border-radius: 26px;
+  background: #000;
+}
+.fullImageLink {
+  display: inline-flex;
+  margin-top: 10px;
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.fullImageLink:hover {
+  color: var(--orange);
+}
 .gallery {
   display: flex;
   flex-wrap: wrap;
@@ -306,6 +384,45 @@
 .g4 {
   flex: 2 1 min(100%, 460px);
   height: clamp(240px, 50vw, 340px);
+}
+
+/* Full-screen mobile screenshots */
+.screenGallery {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+.screenFigure {
+  margin: 0;
+  min-width: 0;
+}
+.screenShot {
+  position: relative;
+  aspect-ratio: 540 / 1224;
+  overflow: hidden;
+  border-radius: 18px;
+  background: #040a18;
+  border: 1px solid var(--line);
+}
+.screenCaption {
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+@media (max-width: 960px) {
+  .screenGallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 480px) {
+  .screenGallery {
+    grid-template-columns: minmax(0, 1fr);
+    max-width: 340px;
+    margin-inline: auto;
+  }
 }
 
 /* Next project */

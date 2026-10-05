@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { Fragment } from 'react';
 import Placeholder from '@/components/Placeholder';
+import ProjectScreens from '@/components/ProjectScreens';
 import Ticker from '@/components/Ticker';
 import { caseStudies, getCaseStudy } from '@/lib/caseStudies';
 import s from './case.module.css';
@@ -47,14 +48,38 @@ export default async function CaseStudyPage({ params }: Params) {
               </Fragment>
             ))}
           </span>
+          {cs.previousName && <p className={s.archNote}>Formerly {cs.previousName}</p>}
+          {cs.results && (
+            <>
+              <dl className={s.results}>
+                {cs.results.map((result) => (
+                  <div key={result.label}>
+                    <dt>{result.label}</dt>
+                    <dd>{result.value}</dd>
+                  </div>
+                ))}
+              </dl>
+              {cs.resultsNote && <p className={s.archNote}>{cs.resultsNote}</p>}
+            </>
+          )}
+          {cs.channelUrl && (
+            <a href={cs.channelUrl} target="_blank" rel="noopener noreferrer" className="btn btn-dark btn-arrow" data-magnetic="0.25">
+              View YouTube Channel <span className="btn-ico">↗</span>
+            </a>
+          )}
+          {cs.appUrl && (
+            <a href={cs.appUrl} target="_blank" rel="noopener noreferrer" className="btn btn-dark btn-arrow" data-magnetic="0.25">
+              Visit {cs.title} <span className="btn-ico">↗</span>
+            </a>
+          )}
         </div>
       </section>
 
       <Ticker items={cs.ticker} />
 
       <section className={s.heroImgSec}>
-        <div className={`wrap ${s.heroImg}`} data-reveal="">
-          <Placeholder label={cs.heroImage.label} src={cs.heroImage.src} alt={`${name} product screens`} />
+        <div className={`wrap ${s.heroImg} ${cs.galleryLayout === 'showcase' ? s.heroImgShowcase : cs.galleryLayout === 'desktop' ? s.desktopHero : ''}`} data-reveal="">
+          {cs.heroScreens ? <ProjectScreens screens={cs.heroScreens} /> : <Placeholder label={cs.heroImage.label} src={cs.heroImage.src} alt={`${name} product screens`} fit={cs.galleryLayout === 'desktop' ? 'contain' : 'cover'} />}
         </div>
       </section>
 
@@ -114,7 +139,7 @@ export default async function CaseStudyPage({ params }: Params) {
         <div className={`wrap ${s.stack40}`} data-reveal="">
           <div className={s.archHead}>
             <h2 className="h2-xs">
-              Technical <span className="accent">Architecture</span>
+              Technical <span className="accent">Integrations</span>
             </h2>
             <p className={s.archNote}>{cs.architectureNote}</p>
           </div>
@@ -153,11 +178,35 @@ export default async function CaseStudyPage({ params }: Params) {
           <h2 className="h2-xs">
             Product <span className="accent">Gallery</span>
           </h2>
-          <div className={s.gallery}>
+          <div className={cs.galleryLayout === 'desktop' ? s.desktopGallery : cs.galleryLayout === 'screens' ? s.screenGallery : cs.galleryLayout === 'showcase' ? s.showcaseGallery : s.gallery}>
             {cs.gallery.map((g, i) => (
-              <div key={g.label} className={`${s.shot} ${galleryShape[i % galleryShape.length]}`}>
-                <Placeholder label={g.label} src={g.src} alt={g.label} />
-              </div>
+              cs.galleryLayout === 'desktop' ? (
+                <figure key={g.label} className={s.screenFigure}>
+                  <a href={g.src} target="_blank" rel="noopener noreferrer" className={s.desktopShot} aria-label={`Open full-size screenshot: ${g.label}`}>
+                    <Placeholder label={g.label} src={g.src} alt={g.label} fit="contain" />
+                  </a>
+                  <figcaption className={s.screenCaption}>{g.label} ↗</figcaption>
+                </figure>
+              ) : cs.galleryLayout === 'screens' ? (
+                <figure key={g.label} className={s.screenFigure}>
+                  <div className={s.screenShot}>
+                    <Placeholder label={g.label} src={g.src} alt={g.label} fit="contain" />
+                  </div>
+                  <figcaption className={s.screenCaption}>{g.label}</figcaption>
+                </figure>
+              ) : cs.galleryLayout === 'showcase' ? (
+                <figure key={g.label} className={s.showcaseFigure}>
+                  <div className={s.showcaseShot}>
+                    <Placeholder label={g.label} src={g.src} alt={g.label} fit="contain" />
+                  </div>
+                  <figcaption className={s.screenCaption}>{g.label}</figcaption>
+                  {g.src && <a href={g.src} target="_blank" rel="noopener noreferrer" className={s.fullImageLink}>Open full-size image ↗</a>}
+                </figure>
+              ) : (
+                <div key={g.label} className={`${s.shot} ${galleryShape[i % galleryShape.length]}`}>
+                  <Placeholder label={g.label} src={g.src} alt={g.label} />
+                </div>
+              )
             ))}
           </div>
         </div>
@@ -167,13 +216,13 @@ export default async function CaseStudyPage({ params }: Params) {
         <div className={`wrap ${s.pairGrid}`} data-reveal="">
           <div className={s.impact}>
             <h3 className={s.pairTitle}>
-              The <span className="accent">Impact</span>
+              Contribution <span className="accent">Summary</span>
             </h3>
             <p className={s.impactP}>{cs.impact}</p>
           </div>
           <div className={s.learned}>
             <h3 className={s.pairTitle}>
-              What I <span className="accent">Learned</span>
+              Engineering <span className="accent">Takeaways</span>
             </h3>
             <p className={s.pairP}>{cs.learned}</p>
           </div>
@@ -183,7 +232,7 @@ export default async function CaseStudyPage({ params }: Params) {
       <section className="sec-b112">
         <Link href={cs.next.href} className={`wrap ${s.next}`}>
           <div className={s.nextText}>
-            <span className={s.nextLabel}>Next Project</span>
+            <span className={s.nextLabel}>More of My Work</span>
             <span className={s.nextTitle}>{cs.next.title}</span>
           </div>
           <span className={s.nextIco}>→</span>

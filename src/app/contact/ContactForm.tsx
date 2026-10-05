@@ -1,34 +1,44 @@
 'use client';
 
 import { useState } from 'react';
+import { site } from '@/lib/site';
 import s from './contact.module.css';
 
-// TODO(usama): connect a form service (e.g. Formspree) or an API route — submitting only shows the confirmation for now.
 export default function ContactForm() {
-  const [sent, setSent] = useState(false);
+  const [draftOpened, setDraftOpened] = useState(false);
 
   return (
     <form
       className={s.form}
       onSubmit={(e) => {
         e.preventDefault();
-        setSent(true);
+        const fields = new FormData(e.currentTarget);
+        const subject = `${fields.get('reason')} — ${fields.get('name')}`;
+        const body = [
+          `Name: ${fields.get('name')}`,
+          `Email: ${fields.get('email')}`,
+          `Company: ${fields.get('company') || 'Not provided'}`,
+          '',
+          String(fields.get('message')),
+        ].join('\n');
+        window.location.href = `mailto:${site.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        setDraftOpened(true);
       }}
     >
-      {sent ? (
+      {draftOpened ? (
         <div className={s.sent} role="status">
-          <span className={s.sentIco}>✓</span>
-          <h2 className={s.sentTitle}>Thanks — message received.</h2>
-          <p className={s.formNote}>I&apos;ll reply within one to two working days.</p>
-          <button type="button" onClick={() => setSent(false)} className={s.again}>
-            Send another
+          <span className={s.sentIco}>↗</span>
+          <h2 className={s.sentTitle}>Send Your Draft from Your Email App.</h2>
+          <p className={s.formNote}>This website hasn&apos;t sent your message. If your email app didn&apos;t open, email <a href={`mailto:${site.email}`}>{site.email}</a> directly.</p>
+          <button type="button" onClick={() => setDraftOpened(false)} className={s.again}>
+            Back to Form
           </button>
         </div>
       ) : (
         <>
           <div className={s.formHead}>
-            <h2 className={s.formTitle}>Send a message</h2>
-            <p className={s.formNote}>Roles, projects or a quick question — all welcome.</p>
+            <h2 className={s.formTitle}>Discuss an Opportunity</h2>
+            <p className={s.formNote}>Share the role, your team and what you&apos;re building. This form prepares a draft in your email app for you to send.</p>
           </div>
           <div className={s.fields}>
             <label className={s.label}>
@@ -40,25 +50,27 @@ export default function ContactForm() {
               <input name="email" required type="email" placeholder="you@company.com" autoComplete="email" className={s.input} />
             </label>
             <label className={s.label}>
-              Company
-              <input name="company" placeholder="Company or project" autoComplete="organization" className={s.input} />
+              Company / Team
+              <input name="company" placeholder="Your company or team" autoComplete="organization" className={s.input} />
             </label>
             <label className={s.label}>
-              Reason for Contact
+              What Would You Like to Discuss?
               <select name="reason" className={s.input}>
-                <option>Full-time role</option>
-                <option>Contract / freelance project</option>
+                <option>AI developer role</option>
+                <option>Software engineering role</option>
+                <option>Contract opportunity</option>
+                <option>Resume request</option>
                 <option>Collaboration</option>
-                <option>Just saying hi</option>
+                <option>General enquiry</option>
               </select>
             </label>
           </div>
           <label className={s.label}>
             Message *
-            <textarea name="message" required rows={6} placeholder="Tell me about the role or product…" className={`${s.input} ${s.textarea}`} />
+            <textarea name="message" required rows={6} placeholder="Tell me about the role, responsibilities and the software your team is building…" className={`${s.input} ${s.textarea}`} />
           </label>
           <button type="submit" className={`btn btn-dark btn-arrow btn-lift ${s.submit}`} data-magnetic="0.25">
-            Send Message <span className="btn-ico">→</span>
+            Open Email Draft <span className="btn-ico">→</span>
           </button>
         </>
       )}

@@ -1,19 +1,19 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import Placeholder from '@/components/Placeholder';
 import Ticker from '@/components/Ticker';
 import { site } from '@/lib/site';
 import ContactForm from './ContactForm';
+import LocalTime from './LocalTime';
 import s from './contact.module.css';
 
-export const metadata: Metadata = { title: 'Contact' };
+export const metadata: Metadata = { title: 'Contact', description: 'Contact Usama Yousaf about AI developer and software engineering opportunities. Based in Pakistan and open to remote teams.' };
 
 const info = [
   { k: 'EMAIL', v: site.email, href: `mailto:${site.email}`, icon: '↗' },
   { k: 'LINKEDIN', v: site.linkedin.label, href: site.linkedin.href, icon: '↗' },
   { k: 'GITHUB', v: site.github.label, href: site.github.href, icon: '↗' },
   { k: 'LOCATION', v: site.location, icon: '•' },
-  { k: 'AVAILABILITY', v: 'Replies within 1–2 working days', icon: '•' },
+  { k: 'OPPORTUNITIES', v: 'AI development & software engineering roles', icon: '•' },
 ];
 
 export default function ContactPage() {
@@ -25,9 +25,9 @@ export default function ContactPage() {
             <Link href="/">Home</Link> <span className="accent">/ Contact</span>
           </span>
           <h1 className="h1">
-            Let&apos;s Build
+            Let&apos;s Talk About
             <br />
-            <span className="accent">Something Useful.</span>
+            <span className="accent">Your Next Hire.</span>
           </h1>
         </div>
       </section>
@@ -62,10 +62,10 @@ export default function ContactPage() {
             </div>
             <div className={s.available}>
               <span className={s.availableDot} />
-              <span>Available for full-time roles &amp; select projects</span>
+              <span>Open to full-time roles, remote teams &amp; contract work</span>
             </div>
             <div className={s.map}>
-              <Placeholder label="Small map — Pakistan (optional)" />
+              <LocalTime />
             </div>
           </aside>
         </div>

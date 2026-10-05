@@ -89,7 +89,7 @@ export default function Nav() {
             )}
           </button>
           <Link href="/contact" className={styles.cta} data-magnetic="0.25">
-            Let&apos;s Talk <span className={styles.ctaArrow}>→</span>
+            Contact Me <span className={styles.ctaArrow}>→</span>
           </Link>
           <button
             type="button"
@@ -128,7 +128,7 @@ export default function Nav() {
             ),
           )}
           <Link href="/contact" onClick={close} className={styles.pCta}>
-            Let&apos;s Talk →
+            Discuss an Opportunity →
           </Link>
         </div>
       )}

@@ -37,14 +37,23 @@ export default function Effects() {
           }
         }
       },
-      { threshold: 0.12, rootMargin: '0px 0px -40px 0px' },
+      // A percentage threshold can never be reached near the top of very tall
+      // reveal targets (for example, the projects grid). Reveal as soon as any
+      // part enters the active viewport instead.
+      { threshold: 0, rootMargin: '0px 0px -40px 0px' },
     );
     const mark = (el: Element, delay = 0, staggered = false) => {
-      if (el.hasAttribute('data-rv')) return;
-      // Don't hide what's already on screen, except inside staggered groups.
-      if (!staggered && el.getBoundingClientRect().top < innerHeight * 0.9) return;
-      el.setAttribute('data-rv', '');
-      if (delay) (el as HTMLElement).style.transitionDelay = `${delay}ms`;
+      const rv = el.getAttribute('data-rv');
+      if (rv === 'in') return;
+      if (rv === null) {
+        // Don't hide what's already on screen, except inside staggered groups.
+        if (!staggered && el.getBoundingClientRect().top < innerHeight * 0.9) return;
+        el.setAttribute('data-rv', '');
+        if (delay) (el as HTMLElement).style.transitionDelay = `${delay}ms`;
+      }
+      // Still hidden: (re)observe. When this effect re-runs (Strict Mode mounts it
+      // twice in dev), elements hidden by the previous run lost their observer
+      // with io.disconnect() and would otherwise stay invisible for good.
       io.observe(el);
     };
 

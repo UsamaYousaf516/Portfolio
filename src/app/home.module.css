@@ -145,6 +145,14 @@
 .cutout {
   position: absolute;
   inset: 0 4%;
+  /* Head stays free above the disc; from the chin down the photo is trimmed to the
+     disc, so a tightly cropped portrait doesn't end in straight side edges. In this
+     box (see .portrait and .disc) the disc is 95.65% wide and 77.44% tall. The disc
+     shares this element's parallax factor so the trimmed edge stays on it. */
+  --head: linear-gradient(#000 0 0) top / 100% 45% no-repeat;
+  --disc: radial-gradient(closest-side, #000 calc(100% - 0.5px), transparent) 50% 100% / 95.65% 77.44% no-repeat;
+  -webkit-mask: var(--head), var(--disc);
+  mask: var(--head), var(--disc);
 }
 .heroCtas {
   position: absolute;
@@ -652,6 +660,12 @@
 .tagSolidDark {
   background: var(--dark);
   color: var(--cream);
+}
+.projectActions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
 }
 .caseBtn {
   align-self: flex-start;

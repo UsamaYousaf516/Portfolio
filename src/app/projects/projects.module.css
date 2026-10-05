@@ -159,6 +159,12 @@ html[data-theme='dark'] .chipOn {
   line-height: 1.6;
   opacity: 0.8;
 }
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+}
 .caseLink {
   align-self: flex-start;
   display: flex;

@@ -188,3 +188,68 @@
   position: relative;
   background: var(--sunk);
 }
+.clock {
+  position: absolute;
+  inset: 0;
+  padding: 24px 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+}
+.clockLabel,
+.clockTime,
+.clockNote {
+  position: relative;
+  z-index: 1;
+}
+.clockLabel {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.clockTime {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(34px, 4vw, 44px);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+  color: var(--ink);
+}
+.clockNote {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--muted);
+}
+/* A dashed ring with a pin at its centre, echoing the hero's portrait ring. */
+.clockRing {
+  position: absolute;
+  right: -60px;
+  top: 50%;
+  width: 220px;
+  height: 220px;
+  translate: 0 -50%;
+  border-radius: 50%;
+  border: 2px dashed var(--orange);
+  opacity: 0.55;
+}
+.clockDot {
+  position: absolute;
+  right: 37px;
+  top: 50%;
+  width: 26px;
+  height: 26px;
+  translate: 0 -50%;
+  border-radius: 50%;
+  background: var(--dark);
+  box-shadow: 0 0 0 6px rgba(245, 160, 0, 0.18);
+}
+.clockDot::after {
+  content: '';
+  position: absolute;
+  inset: 8.5px;
+  border-radius: 50%;
+  background: var(--orange);
+}

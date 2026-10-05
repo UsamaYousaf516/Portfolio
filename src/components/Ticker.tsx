@@ -1,15 +1,18 @@
 import styles from './Ticker.module.css';
 
 const DEFAULT_ITEMS = [
-  'Flutter Development',
-  'Mobile Apps',
+  'AI Development',
+  'Claude & ChatGPT',
+  'MCP Servers',
+  'Next.js & TypeScript',
+  'Cross-Platform Mobile',
   'Web Applications',
   'Firebase',
   'Supabase',
   'REST APIs',
   'Realtime Systems',
-  'AI-Assisted Development',
-  'Product Engineering',
+  'Software Engineering',
+  'Production Delivery',
 ];
 
 /** Dark scrolling strip. The item list is rendered twice so the loop is seamless. */

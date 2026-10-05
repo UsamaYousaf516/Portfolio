@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import Placeholder from '@/components/Placeholder';
+import ProjectScreens from '@/components/ProjectScreens';
 import { projectFilters, projects, type ProjectFilter } from '@/lib/projects';
 import s from './projects.module.css';
 
@@ -26,7 +27,8 @@ export default function ProjectGrid() {
       <div className={s.grid}>
         {shown.map((p) => {
           const tone = p.tone === 'dark' ? s.dark : s.light;
-          const img = <Placeholder label={`${p.title} — product screens`} src={p.image} alt={p.title} />;
+          const img = p.screens ? <ProjectScreens screens={p.screens} /> : <Placeholder label={`${p.title} — ${p.cat}`} src={p.image} alt={p.title} fit={p.imageFit} />;
+          const action = p.href === '/' ? 'Explore Website' : p.href === '/contact' ? 'Discuss This Project' : 'Read Case Study';
           const tags = (
             <div className={s.tags}>
               {p.tags.map((t) => (
@@ -38,8 +40,8 @@ export default function ProjectGrid() {
           );
           if (p.layout.wide) {
             return (
-              <article key={p.title} className={`${s.wide} ${tone}`}>
-                <Link href={p.href} className={s.wideImg} data-cursor="view" aria-label={`${p.title} case study`}>
+              <article id={p.id} key={p.title} className={`${s.wide} ${tone}`}>
+                <Link href={p.href} className={s.wideImg} data-cursor="view" aria-label={`${action}: ${p.title}`}>
                   <div className={s.zoom}>{img}</div>
                 </Link>
                 <div className={s.wideText}>
@@ -49,21 +51,33 @@ export default function ProjectGrid() {
                   <h3 className={s.wideTitle}>{p.title}</h3>
                   <p className={s.wideDesc}>{p.desc}</p>
                   {tags}
-                  <Link href={p.href} className={s.caseLink}>
-                    <span className={s.caseIco}>↗</span>Case study
-                  </Link>
+                  <div className={s.actions}>
+                    <Link href={p.href} className={s.caseLink}>
+                      <span className={s.caseIco}>↗</span>{action}
+                    </Link>
+                    {p.appUrl && (
+                      <a href={p.appUrl} target="_blank" rel="noopener noreferrer" className={s.caseLink}>
+                        Visit {p.title} ↗
+                      </a>
+                    )}
+                    {p.channelUrl && (
+                      <a href={p.channelUrl} target="_blank" rel="noopener noreferrer" className={s.caseLink}>
+                        View YouTube Channel ↗
+                      </a>
+                    )}
+                  </div>
                 </div>
               </article>
             );
           }
           return (
-            <article key={p.title} className={`${s.narrow} ${tone}`} style={{ gridRow: `span ${p.layout.rows}` }}>
+            <article id={p.id} key={p.title} className={`${s.narrow} ${tone}`} style={{ gridRow: `span ${p.layout.rows}` }}>
               <Link
                 href={p.href}
                 className={s.narrowImg}
                 style={{ minHeight: p.layout.imgHeight }}
                 data-cursor="view"
-                aria-label={`${p.title} case study`}
+                aria-label={`${action}: ${p.title}`}
               >
                 <div className={s.zoom}>{img}</div>
               </Link>
@@ -75,7 +89,7 @@ export default function ProjectGrid() {
                     </span>
                     <h3 className={s.narrowTitle}>{p.title}</h3>
                   </div>
-                  <Link href={p.href} aria-label="Case study" className={s.roundArrow}>
+                  <Link href={p.href} aria-label={`${action}: ${p.title}`} className={s.roundArrow}>
                     ↗
                   </Link>
                 </div>
@@ -87,7 +101,7 @@ export default function ProjectGrid() {
         })}
       </div>
 
-      {shown.length === 0 && <p className={s.empty}>No projects in this category yet.</p>}
+      {shown.length === 0 && <p className={s.empty}>No projects match this category. Select All to see my work.</p>}
     </div>
   );
 }

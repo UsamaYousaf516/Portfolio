@@ -3,35 +3,38 @@ import Link from 'next/link';
 import Eyebrow from '@/components/Eyebrow';
 import Placeholder from '@/components/Placeholder';
 import Ticker from '@/components/Ticker';
+import { toolkit } from '@/lib/home';
 import s from './about.module.css';
 
-export const metadata: Metadata = { title: 'About' };
+export const metadata: Metadata = {
+  title: 'About — AI Developer & Software Engineer',
+  description: 'Meet Usama Yousaf: an AI developer using Claude, ChatGPT and MCP servers, with 3+ years of application development experience and 25+ freelance projects.',
+};
 
 const strengths = [
-  { n: '01', t: 'Flutter depth', d: 'Three years of production Flutter: architecture, state management, native integrations and releases.' },
-  { n: '02', t: 'Realtime systems', d: 'Voice rooms, live chat, presence and notifications with Agora, ZegoCloud, WebSockets and FCM.' },
-  { n: '03', t: 'Integrations', d: 'Firebase, Supabase, REST APIs, payments and third-party services like Kisi and Glofox.' },
-  { n: '04', t: 'Range beyond Flutter', d: 'React Native, web admin portals and AI-assisted workflows to get productive in new stacks quickly.' },
+  { n: '01', t: 'AI Development Workflows', d: 'Claude, ChatGPT and MCP servers support my research, prototyping, implementation and debugging across technology stacks.' },
+  { n: '02', t: 'Application Engineering', d: 'Three years of Flutter experience, plus web applications and admin dashboards, from interface implementation to release.' },
+    { n: '03', t: 'Backend & API Integration', d: 'Authentication, data, payments and external services, using Firebase, Supabase, REST APIs and integrations such as ExerciseDB, FatSecret, Gymmater and Gatekeeper.' },
+  { n: '04', t: 'Realtime Communication', d: 'Voice rooms, messaging, live events and push notifications with Agora, ZegoCloud, WebSockets and Firebase Cloud Messaging.' },
 ];
 
-// TODO(usama): fill in or remove the bracketed earliest role.
 const timeline = [
   {
     when: '2023 — PRESENT',
     role: 'Flutter Developer',
-    org: 'Black Tech / Parashoot',
-    d: 'Mobile apps, Flutter web/admin portals, API and Firebase/Supabase integrations, realtime features, debugging and production deployment.',
+    org: 'InfiniTech',
+    d: 'Develop and maintain mobile applications and Flutter web admin portals. Integrate APIs, Firebase, Supabase and realtime features, resolve production issues and support releases.',
   },
-  { when: 'ONGOING', role: 'Freelance Developer', org: '25+ completed projects', d: 'Mobile, web and backend builds for independent clients across industries.' },
-  { when: '[YEAR]', role: '[Earlier role or education]', org: '[Organisation]', d: '[Optional — remove if not needed.]' },
+  { when: 'ONGOING', role: 'Freelance Software Developer', org: '25+ projects delivered', d: 'Build mobile and web applications for independent clients, translating requirements into interfaces, integrations and working releases.' },
 ];
 
-const stack = ['Flutter', 'Dart', 'React Native', 'Firebase', 'Supabase', 'REST APIs', 'WebSockets', 'Provider', 'GetX', 'ChangeNotifier', 'Agora', 'ZegoCloud', 'FCM', 'Figma-to-Code', 'AI Coding Assistants'];
+const stack = [...new Set(toolkit.flatMap((category) => category.items.map((tool) => tool.name)))];
 
 const achievements = [
-  { t: 'Shipped a realtime social audio platform', d: 'Voice rooms, gifting and in-app currency on Yaro / Voicely.' },
-  { t: 'Integrated physical access & gym systems', d: 'Kisi and Glofox integrations for Restart Fitness.' },
-  { t: '25+ freelance projects delivered', d: 'Across mobile, web and backend work for independent clients.' },
+  { t: 'Desktop creator tool used in production', d: 'Built Ranking Video Editor and use it for a YouTube channel with 500K+ views and 700 subscribers.' },
+  { t: 'Social gaming & live application development', d: 'Contributed to Ludino’s gaming, live rooms, chat, gifting and purchase flows.' },
+    { t: 'Fitness platform development', d: 'Built Restart Fitness progression and video review flows, plus Elite Fitness workout, nutrition and member access integrations.' },
+  { t: '25+ freelance projects delivered', d: 'Mobile apps, web applications and backend integrations for independent clients.' },
 ];
 
 export default function AboutPage() {
@@ -53,23 +56,23 @@ export default function AboutPage() {
       <section className="sec-72">
         <div className={`wrap ${s.intro}`} data-reveal="">
           <div className={s.wide}>
-            <Placeholder label="Wide photo — Usama at his desk / working setup" />
+            <Placeholder label="Usama Yousaf — AI Developer & Software Engineer" />
           </div>
           <div className={s.introGrid}>
             <div className={`${s.introCard} ${s.r1}`}>
               <span className={s.introHead}>
-                <span className={s.icoDark}>✦</span>Who I am
+                <span className={s.icoDark}>✦</span>AI Developer &amp; Software Engineer
               </span>
               <p className={s.introP}>
-                A software developer from Pakistan with around three years of professional experience, building cross-platform products with Flutter as my core.
+                I&apos;m Usama, a developer based in Pakistan. I build software with Claude, ChatGPT and MCP servers, backed by 3+ years of application development experience.
               </p>
             </div>
             <div className={`${s.introCard} ${s.r2}`}>
               <span className={s.introHead}>
-                <span className={s.icoOrange}>→</span>What I&apos;m looking for
+                <span className={s.icoOrange}>→</span>My Next Role
               </span>
               <p className={s.introP}>
-                A product team where I can own features end to end — mobile, web and the integrations behind them — and keep growing as an engineer.
+                I&apos;m looking for an AI developer or software engineering role where I can build useful applications, take ownership of features and contribute to a team that values practical problem solving.
               </p>
             </div>
           </div>
@@ -81,38 +84,37 @@ export default function AboutPage() {
           <div className={s.frame}>
             <div className={s.frameShape} />
             <div className={s.frameImg}>
-              <Placeholder label="Portrait cutout" transparent />
+              <Placeholder label="Portrait cutout" src="/images/usama-about.webp" alt="Usama Yousaf" transparent />
             </div>
           </div>
           <div className={s.storyText}>
             <Eyebrow>Career Story</Eyebrow>
             <h2 className="h2-sm">
-              Started With Flutter.
+              Built on Experience.
               <br />
-              <span className="accent">Kept Going.</span>
+              <span className="accent">Expanded with AI.</span>
             </h2>
             <p className={s.storyP}>
-              I&apos;m Usama Yousaf, a software developer focused on turning product ideas into reliable, polished digital experiences. Flutter has been my core
-              specialization for the past three years, but my work increasingly spans mobile, web, backend services, realtime systems and AI-assisted development.
+              My experience spans a Flutter development role at InfiniTech and more than 25 freelance projects. That work includes mobile applications,
+              web admin portals, APIs, realtime audio, payments and production releases.
             </p>
-            {/* TODO(usama): career story */}
-            <p className={s.storyP}>[Add a few sentences on how you got into development, your freelance years, and joining Black Tech.]</p>
+            <p className={s.storyP}>Today, Claude, ChatGPT and MCP servers are part of how I develop software. They help me explore solutions and work across stacks. I combine that workflow with hands-on debugging, code review and release experience to turn ideas into applications people can use.</p>
             <div className={s.storyStats}>
               <div className={s.storyStat}>
                 <span className={s.storyStatV}>
                   3<span className="accent">+</span>
                 </span>
-                <span className={s.storyStatL}>Years Experience</span>
+                <span className={s.storyStatL}>Years in Development</span>
               </div>
               <div className={s.storyStat}>
                 <span className={s.storyStatV}>
                   25<span className="accent">+</span>
                 </span>
-                <span className={s.storyStatL}>Freelance Projects</span>
+                <span className={s.storyStatL}>Freelance Projects Delivered</span>
               </div>
               <div className={s.storyStat}>
-                <span className={s.storyStatV}>2</span>
-                <span className={s.storyStatL}>Platforms: Mobile + Web</span>
+                <span className={s.storyStatV}>AI</span>
+                <span className={s.storyStatL}>Claude · ChatGPT · MCP</span>
               </div>
             </div>
           </div>
@@ -122,9 +124,9 @@ export default function AboutPage() {
       <section className="sec-112">
         <div className={`wrap ${s.stack48}`} data-reveal="">
           <div className={s.centerHead}>
-            <Eyebrow>How I Think</Eyebrow>
+            <Eyebrow>Core Strengths</Eyebrow>
             <h2 className={`h2-sm ${s.thinkTitle}`}>
-              I care about the <span className="accent">complete product</span> — how it looks, feels, performs and ships.
+              <span className="accent">AI tools.</span> Practical engineering. Ownership from start to finish.
             </h2>
           </div>
           <div className={s.strengths}>
@@ -144,9 +146,9 @@ export default function AboutPage() {
           <div className={s.timelineHead}>
             <Eyebrow>Experience</Eyebrow>
             <h2 className="h2-sm">
-              The Journey
+              Professional
               <br />
-              <span className="accent">So Far.</span>
+              <span className="accent">Experience.</span>
             </h2>
           </div>
           <div className={s.timeline}>
@@ -167,7 +169,7 @@ export default function AboutPage() {
         <div className={`wrap ${s.stack56}`} data-reveal="">
           <div className={s.stack20}>
             <h2 className={s.h2dark}>
-              Technology <span className="accent">Stack</span>
+              Technical <span className="accent">Skills</span>
             </h2>
             <div className={s.stackChips}>
               {stack.map((x) => (
@@ -179,7 +181,7 @@ export default function AboutPage() {
           </div>
           <div className={s.stack20}>
             <h2 className={s.h2dark}>
-              Selected <span className="accent">Achievements</span>
+              Selected <span className="accent">Contributions</span>
             </h2>
             <div className={s.achGrid}>
               {achievements.map((a) => (
@@ -196,13 +198,13 @@ export default function AboutPage() {
 
       <section className="sec-112">
         <div className={`wrap ${s.cta}`} data-reveal="">
-          <h2 className={s.ctaTitle}>See what I&apos;ve built, or start a conversation.</h2>
+          <h2 className={s.ctaTitle}>See My Work. Let&apos;s Talk About Your Team.</h2>
           <div className={s.ctaBtns}>
             <Link href="/projects" className="btn btn-dark btn-arrow" data-magnetic="0.25">
               View Projects <span className="btn-ico">→</span>
             </Link>
             <Link href="/contact" className={`btn btn-outline-dark ${s.ctaContact}`}>
-              Contact
+              Discuss a Role
             </Link>
           </div>
         </div>
